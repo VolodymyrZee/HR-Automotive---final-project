@@ -34,7 +34,7 @@ class Layout extends Component {
      <Route exact path="/" component={Signup} />
      
     
-     <Route path="/about-us" component={AboutUs}/>
+     {/* <Route path="/about-us" component={AboutUs}/> */}
      <Route path="/thankyou" component={ThankYou}/>
      
      

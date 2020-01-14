@@ -13,11 +13,11 @@ class AboutUs extends Component {
                     <div className="w3-half w3-container">
                         <h1 className="w3-xxlarge w3 text-light-grey">Hello</h1>
                         <h1 className="w3-xxlarge w3 text-grey">We are</h1>
-                        <h1 className="w3-jumbo">InShock</h1>
+                        <h1 className="w3-jumbo">HR Automotive Services</h1>
                     </div>
                     <div className="w3-half w3-container w3-xlarge w3-text-grey">
-                        <p className="">We build design teams- we break things down and buld it better - we deliver the best of solutions</p>
-                        <p>InShock means powerful simplicity</p>
+                        <p className="">We specialize in European vehicles and we can guarantee an exceptional experience while providing quality car maintenance and repairs</p>
+                        <p>Your experience with HR Automotive Services will be unlike any other because of our quick, reliant, and efficient work.</p>
                     </div>
                 </div>
                 {/* Second Grid: Resent*/}
@@ -31,7 +31,7 @@ class AboutUs extends Component {
                     <div className="w3-half w3-contsainer">
                         <img src={pic1} style ={{ width:'100%'}}/>
                         <p className="w3-xlarge w3-text-grey">
-                            Demos, Logos, Reports, Names, Events, Media, Wordpress, Google, Books, Optimisations
+                            Egnine, Transmission, Suspension, Brakes, Perfomance and much more. We can do it all!
                         </p>
                     </div>
                 </div>
