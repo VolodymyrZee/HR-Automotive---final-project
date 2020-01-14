@@ -20,6 +20,7 @@ class Layout extends Component {
                 <React.Fragment>
 <Route exact path="/" component={Home}/>
 <Route path="/home" component={Home}/>
+<Route path="/about-us" component={AboutUs}/>
 
 
                 </React.Fragment>
