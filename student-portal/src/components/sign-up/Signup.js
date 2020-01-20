@@ -42,7 +42,7 @@ this.setState (
 
     render() {
         return (
-                            <div>
+                            <div class="signUp">
                                 
                                
                                 <form onSubmit ={this.submitHandler} className="sign-up-form container">

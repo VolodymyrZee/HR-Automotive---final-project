@@ -60,7 +60,7 @@ submitHandler = (event) => {
             <form onSubmit ={this.submitHandler} className="form-inline mt-2 mt-md-0">
             <input onChange ={this.handleChange} value={this.state.email} name="email" className="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Search" />
             <input onChange ={this.handleChange} value={this.state.password}name="password" className="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search" />
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+            <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="signIn">Sign In</span></button>
         </form>
            );
 
@@ -87,19 +87,19 @@ submitHandler = (event) => {
                         <ul className="navbar-nav mr-auto">
                             
                             {links}
-                            <li className="nav-item">
-                                <Link className="nav-link" to="about-us">Abous us</Link>
+                            <li class="aboutUS" className="nav-item">
+                                <Link  className="nav-link" to="about-us">Abous Us</Link>
                             </li>
                             
                         </ul>
-                        <a target="_blank" id="action-list-1" class="dtKbfb  oYxtQd" href="tel:+1-314-426-2020" data-tracking-element-type="2" jslog="56037; track:impression,click" itemprop="telephone" data-enable-ga="true" data-ga-prefix="action-list"><span class="DPvwYc xPRkMe" aria-hidden="true"></span><span>Call now</span></a>
+                        <a target="_blank" id="action-list-1" class="active" href="tel:+1-314-426-2020" data-tracking-element-type="2" jslog="56037; track:impression,click" itemprop="telephone" data-enable-ga="true" data-ga-prefix="action-list"><span class="active1">Call now</span></a>
                    
 
-                        <a target="_blank" id="action-list-2" class="dtKbfb  oYxtQd" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" data-tracking-element-type="5" jslog="56039; track:impression,click" itemprop="hasMap" data-enable-ga="true" data-ga-prefix="action-list"><span class="DPvwYc xPRkMe" aria-hidden="true"></span><span>Get directions</span></a>
-                        <Link className="navbar-brand" to="#">Call Nowl</Link>
-                    <button className="navbar-toggler" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <a target="_blank" id="action-list-2" class="active" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" data-tracking-element-type="5" jslog="56039; track:impression,click" itemprop="hasMap" data-enable-ga="true" data-ga-prefix="action-list"><span class="active2">Get directions</span></a>
+                        {/* <Link className="navbar-brand" to="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243">Get Directions</Link> */}
+                    {/* <button className="navbar-toggler" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
-                        </button>
+                        </button> */}
                         
                  
                  {signInSignOutForm}
