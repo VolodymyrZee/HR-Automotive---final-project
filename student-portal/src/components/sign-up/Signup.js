@@ -8,7 +8,12 @@ class Signup extends Component {
             lastName: '',
             email: '',
             telephone: '',
-            password: ''
+            password: '',
+            carYear: '',
+            carMake: '',
+            carModel: '',
+            carColor: '',
+            carLicensePlate: ''
         }
     }
 
@@ -67,9 +72,33 @@ this.setState (
                     <input className="row" type="email" onChange={this.handleChange} value={this.state.user.email} name="email" className="form-control" placeholder="Email"/>
                     </div>
                     <div className="col">
-                    <input className="row" type="tpassword" onChange={this.handleChange} value={this.state.user.password} name="password" className="form-control" placeholder="Password"/>
+                    <input className="row" type="password" onChange={this.handleChange} value={this.state.user.password} name="password" className="form-control" placeholder="Password"/>
                     </div>
                     </div>
+
+                    <div class="row mb-3">
+                    <div className="col">
+                    <input className="row" type="text" onChange={this.handleChange} value={this.state.user.carYear} name="carYear" className="form-control" placeholder="Vehicle Year"/>
+                    </div>
+                    <div className="col">
+                    <input className="row" type="text" onChange={this.handleChange} value={this.state.user.carMake} name="carMake" className="form-control" placeholder="Vehicle Make"/>
+                    </div>
+                    </div>
+
+                    <div class="row mb-3">
+                    <div className="col">
+                    <input className="row" type="text" onChange={this.handleChange} value={this.state.user.carModel} name="carModel" className="form-control" placeholder="Vehicle Model"/>
+                    </div>
+                    <div className="col">
+                    <input className="row" type="text" onChange={this.handleChange} value={this.state.user.carColor} name="carColor" className="form-control" placeholder="Vehicle Color"/>
+                    </div>
+                    <div className="col">
+                    <input className="row" type="text" onChange={this.handleChange} value={this.state.user.carLicensePlate} name="carLicensePlate" className="form-control" placeholder="License Plate"/>
+                    </div>
+                    </div>
+
+
+
                    
                <button type="submit" class="btn btn-success btn btn-primary btn-lg btn-block">Sign Up</button>
                 </form>

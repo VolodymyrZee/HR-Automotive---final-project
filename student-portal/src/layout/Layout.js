@@ -12,6 +12,7 @@ class Layout extends Component {
             <React.Fragment>
 <Route path="/sign-up" component={Signup}/>
      <Route path="/about-us" component={AboutUs}/>
+     <Route path="/home" component={Home}/>
 
             </React.Fragment>
         );

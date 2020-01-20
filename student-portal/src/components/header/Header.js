@@ -79,7 +79,7 @@ submitHandler = (event) => {
             
                 <div className="margin-bottom-80">
                 <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    <Link className="navbar-brand" to="/">User Portal</Link>
+                    <Link className="navbar-brand" to="/">User Info</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -92,14 +92,11 @@ submitHandler = (event) => {
                             </li>
                             
                         </ul>
-                        <a target="_blank" id="action-list-1" class="active" href="tel:+1-314-426-2020" data-tracking-element-type="2" jslog="56037; track:impression,click" itemprop="telephone" data-enable-ga="true" data-ga-prefix="action-list"><span class="active1">Call now</span></a>
+                        <a class="active" href="tel:+1-314-426-2020" data-tracking-element-type="2" jslog="56037; track:impression,click" itemprop="telephone" data-enable-ga="true" data-ga-prefix="action-list"><span class="active1">•Call now</span></a>
                    
 
-                        <a target="_blank" id="action-list-2" class="active" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" data-tracking-element-type="5" jslog="56039; track:impression,click" itemprop="hasMap" data-enable-ga="true" data-ga-prefix="action-list"><span class="active2">Get directions</span></a>
-                        {/* <Link className="navbar-brand" to="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243">Get Directions</Link> */}
-                    {/* <button className="navbar-toggler" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                        </button> */}
+                        <a class="active" href="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" data-tracking-element-type="5" jslog="56039; track:impression,click" itemprop="hasMap" data-enable-ga="true" data-ga-prefix="action-list"><span class="active2">•Get directions</span></a>
+                        
                         
                  
                  {signInSignOutForm}

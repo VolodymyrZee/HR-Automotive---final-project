@@ -15,23 +15,28 @@
 }
 
 .thx {
-  background-color: #2c3341;
+  background-color: #ffffff;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: '35px';
-  color: rgb(179, 173, 173);
+  align-content: center;
+  font-size: large;
+  color: rgb(51, 50, 50);
+}
+
+.AU {
+  background-color: #393a3b;
 }
 
 .active1 {
-  background-color: rgb(30, 177, 25);
-  font-weight: bold;
+  background-color: #3b3c3f;
+  
   color: white;
 }
 
 .signIn{
-  background-color: rgb(30, 177, 25);
+  background-color: #3b3c3f;
   font-weight: bold;
   color: white;
 }
@@ -44,11 +49,12 @@
 
 .active2{
   color: white;
-  background-color: rgb(30, 177, 25);
+  background-color: #3b3c3f;
   margin-left: 10px;
-  font-weight: bold;
+ 
   margin-right: 20px;
 }
+
 
 .App-header {
   background-color: #3b3c3f;

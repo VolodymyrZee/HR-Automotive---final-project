@@ -6,12 +6,12 @@ import pic4 from '../../images/pic4.jpg';
 class AboutUs extends Component {
     render() {
         return (
-            <div className="w3-content" style={{'max-width':'1500px'}}>
+            <div class="AU" className="w3-content" style={{'max-width':'1500px'}}>
                 <div className="w3-panel">
                    <i className="w3-xlarge fa fa-bars"></i> 
                 </div>
                 {/* First Grid:Logo & About */}
-                <div className="w3-row">
+                <div class="AU" className="w3-row">
                     <div className="w3-half w3-container">
                         <h1 className="w3-xxlarge w3 text-light-grey">Hello</h1>
                         <h1 className="w3-xxlarge w3 text-grey">We are</h1>
@@ -30,7 +30,7 @@ class AboutUs extends Component {
                     <div className="w3-half w3-contsainer">
                         <img src={pic1} style ={{ width:'95%'}}/>
                         <p className="w3-xlarge w3-text-grey">
-                            Reasonable prices and professional diagnostics.
+                        Professional diagnostic and reasonable prices.
                         </p>
                     </div>
                     <div className="w3-half w3-contsainer">
