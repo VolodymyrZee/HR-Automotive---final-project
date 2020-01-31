@@ -62,7 +62,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Login">Login</a>
+                        <a class="page-scroll" href="login">Login</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="register">Sign Up</a>
