@@ -34,7 +34,7 @@
   <div id="wrapper">
    
     
-    <%-- <jsp:include page="header.jsp"/> --%>
+     <jsp:include page="header.jsp"/> 
     
    
     <section id="inner-headline">
@@ -144,7 +144,7 @@
        
       </div>
     </section>
-  <%--   <jsp:include page="footer.jsp"/> --%>
+   <jsp:include page="footer.jsp"/> 
   </div>
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
   <script src="static/vendor/jquery/jquery.min.js"></script>

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Home</title>
 
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="static/css/agency.min.css" rel="stylesheet">
+    <link href="static1/css/agency.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -106,7 +106,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Best european cars repair shop in St Louis area.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -329,7 +329,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <img src="static1/img/team/1.jpg" class="img-responsive img-circle" alt="">
                         <h4>Roman</h4>
                         <p class="text-muted">Owner and Lead Mechanic</p>
 
@@ -337,7 +337,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <img src="static1/img/team/2.jpg" class="img-responsive img-circle" alt="">
                         <h4>Stepan</h4>
                         <p class="text-muted">Junior Mechanic</p>
 
@@ -345,7 +345,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <img src="static1/img/team/3.jpg" class="img-responsive img-circle" alt="">
                         <h4>Vitaliy</h4>
                         <p class="text-muted">Mechanic/Body Man</p>
 
@@ -366,22 +366,22 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <a target="_blank" href="https://www.continental.com/en-us">
-                        <img src="static/img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                        <img src="static1/img/logos/envato.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a target="_blank" href="https://www.mishimoto.com/">
-                        <img src="static/img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                        <img src="static1/img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a target="_blank" href="https://www.castrol.com/">
-                        <img src="static/img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                        <img src="static1/img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a target="_blank" href="https://www.knfilters.com/">
-                        <img src="static/img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                        <img src="static1/img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
             </div>
@@ -544,7 +544,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="static/img/portfolio/treehouse-preview.jpg" alt="">
+                                <img class="img-responsive img-centered" src="static1/img/portfolio/treehouse-preview.jpg" alt="">
                                 <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -729,20 +729,20 @@
 <button type="submit">Submit</button>              action is the mapping
 </form> --> --%>
 
-<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static1/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static1/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="static/js/jqBootstrapValidation.js"></script>
-    <script src="static/js/contact_me.js"></script>
+    <script src="static1/js/jqBootstrapValidation.js"></script>
+    <script src="static1/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="static/js/agency.min.js"></script>
+    <script src="static1/js/agency.min.js"></script>
 
 </body>
 </html>

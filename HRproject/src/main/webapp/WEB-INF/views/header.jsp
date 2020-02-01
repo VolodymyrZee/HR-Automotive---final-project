@@ -4,26 +4,22 @@
 
 <header>
       <div class="container">
-        <!-- hidden top area toggle link -->
-        <div id="header-hidden-link">
-          <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
-        </div>
-        <!-- end toggle link -->
+       
         <div class="row nomargin">
           <div class="span12">
             <div class="headnav">
               <ul>              
               <c:choose>
 			  <c:when test="${empty loggedInUser}">			  
-              <li><a href="register" ><i class="icon-user"></i>Sign Up</a></li>
+              <li><a href="register" ><i class="icon-user"></i><h4>Sign Up</h4></a></li>
               
               <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
                -->
-               <li><a href="#mySignin" data-toggle="modal">Sign in</a></li>
+               <li><a href="#mySignin" data-toggle="modal"><h4>Sign in</h4></a></li>
               </c:when>
 			  <c:otherwise>
-			  <li><a href="logout">Logout</a></li>
-			  <li><a href="profile">My Profile</a></li>
+			  <li><a href="logout"><h4>Logout</h4></a></li>
+			  <li><a href="profile"><h4>My Profile</h4></a></li>
 			  </c:otherwise>
 			  </c:choose>
               </ul>
@@ -136,7 +132,7 @@
                   </div>
                   <div class="control-group">
                     <div class="controls">
-                      <button type="submit" class="btn">Sign in</button>
+                      <button type="submit" class="btn"><h4>Sign in</h4></button>
                     </div>
                     <p class="aligncenter margintop20">
                       Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
@@ -179,7 +175,7 @@
             <div class="logo">
               <a href="index">
               </a>
-              <h1>Capstone </h1>
+              <a href="index"><h1>HR Automotive </h1></a>
             </div>
           </div>
           <div class="span8">
@@ -188,20 +184,20 @@
                 <nav>
                   <ul class="nav topnav">
                     <li class="dropdown">
-                      <a href="index">Home <i class="icon-angle-down"></i></a>
+                      <a href="index"><h3>Home </h3><i class="icon-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="about">About</a></li>
-                        <li><a href="service">Contact</a></li>
+                        <li><a href="services">Contact</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="about">About </a>
+                      <a href="about"><h3>About</h3> </a>
                     </li>                  
                     <li>
-                      <a href="service">Contact </a>
+                      <a href="services"><h3>Contact</h3> </a>
                     </li>
                     <c:if test="${not empty loggedInUser}">
-                      <li><a href="users">Users</a></li>
+                      <li><a href="users"><h3>Users</h3></a></li>
                     </c:if>
                   </ul>
                 </nav>

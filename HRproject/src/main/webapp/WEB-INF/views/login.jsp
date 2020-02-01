@@ -2,8 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%-- <c:if test="${not empty loggedInUser}">
+<%response.sendRedirect("profile");%>
+</c:if> --%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <meta charset="utf-8">
@@ -15,11 +18,11 @@
 <!--   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  -->
     <!-- Custom Fonts -->
-    <link href="static/css/bootstrap.css" rel="stylesheet" />
-      <link href="static/css/style2.css" rel="stylesheet" />
-        <link href="static/css/flexslider.css" rel="stylesheet" />
-        <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
-        <link href="static/css/jcarousel.css" rel="stylesheet" />
+    <link href="static1/css/bootstrap.css" rel="stylesheet" />
+      <link href="static1/css/style2.css" rel="stylesheet" />
+        <link href="static1/css/flexslider.css" rel="stylesheet" />
+        <link href="static1/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="static1/css/jcarousel.css" rel="stylesheet" />
       
     
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +32,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="static/css/agency.min.css" rel="stylesheet">
+    <link href="static1/css/agency.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -38,7 +41,7 @@
 
 <div id="wrapper">
     
- <%--    <jsp:include page="header.jsp"/> --%>
+ <jsp:include page="header.jsp"/> 
     <!-- end header -->
     <section id="inner-headline">
       <div class="container">
@@ -102,24 +105,24 @@
         
       </div>
     </section>
-  <%-- <jsp:include page="footer.jsp"/> --%>
+ <jsp:include page="footer.jsp"/> 
   </div>    <!-- wrapper -->
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
   
-<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static1/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static1/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="static/js/jqBootstrapValidation.js"></script>
-    <script src="static/js/contact_me.js"></script>
+    <script src="static1/js/jqBootstrapValidation.js"></script>
+    <script src="static1/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="static/js/agency.min.js"></script>
+    <script src="static1/js/agency.min.js"></script>
 
 </body>
 </html>
