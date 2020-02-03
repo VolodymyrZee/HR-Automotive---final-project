@@ -56,6 +56,11 @@ body {
   color: #656565;
 }
 
+.nav topnav {
+	color: #ff2bdb;
+	backgroundcolor: yellow;
+}
+
 a:active {
   outline: 0;
 }

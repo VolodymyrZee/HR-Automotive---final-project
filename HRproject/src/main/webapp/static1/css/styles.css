@@ -9,3 +9,7 @@
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
+.nav topnav {
+	color: #ff2bdb;
+	backgroundcolor: yellow;
+}

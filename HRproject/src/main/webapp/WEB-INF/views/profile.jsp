@@ -47,7 +47,7 @@
    <jsp:include page="header.jsp"/>
     
     <!-- end header -->
-    <section id="inner-headline">
+    <%-- <section id="inner-headline">
       <div class="container">
         <div class="row">
           <div class="span4">
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --%>
     <section id="content">
       <div class="container">
         <div class="row">

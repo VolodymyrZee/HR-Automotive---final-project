@@ -17,9 +17,16 @@
 
   <title>About</title>
 
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <!--   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ -->
     <!-- Custom Fonts -->
+    <link href="static1/css/bootstrap.css" rel="stylesheet" />
+      <link href="static1/css/style2.css" rel="stylesheet" />
+        <link href="static1/css/flexslider.css" rel="stylesheet" />
+        <link href="static1/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="static1/css/jcarousel.css" rel="stylesheet" />
+      
+    
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -27,7 +34,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="static/css/agency.min.css" rel="stylesheet">
+    <link href="static1/css/agency.min.css" rel="stylesheet">
 </head>
 
 <body>

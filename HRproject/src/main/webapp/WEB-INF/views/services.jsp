@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="java.io.*,java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +13,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-
-  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+<!--   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ -->
     <!-- Custom Fonts -->
+    <link href="static1/css/bootstrap.css" rel="stylesheet" />
+      <link href="static1/css/styles.css" rel="stylesheet" />
+        <link href="static/css/flexslider.css" rel="stylesheet" />
+        <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="static/css/jcarousel.css" rel="stylesheet" />
+      
+    
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -25,16 +30,18 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="static/css/agency.min.css" rel="stylesheet">
+    <link href="static1/css/agency.min.css" rel="stylesheet">
 
  </head>
 
 <body>
+
   <div id="wrapper">
+  <jsp:include page="header.jsp"/> 
    
-   <%--  <jsp:include page="header.jsp"/> --%>
+   
     <!-- end header -->
-    <section id="inner-headline">
+    <!-- <section id="inner-headline">
       <div class="container">
         <div class="row">
           <div class="span4">
@@ -50,6 +57,11 @@
           </div>
         </div>
       </div>
+    </section> -->
+    
+    <section id="content"> 
+     <iframe src="https://maps.google.com/maps?q=HR%20Automotive%20st%20louis&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="650" frameborder="0" style="border:0" allowfullscreen></iframe> 
+      <<!-- div class="mapouter"><div class="gmap_canvas"><iframe width="1080" height="642" id="gmap_canvas" src="https://maps.google.com/maps?q=HR%20Automotive%20st%20louis&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:642px;width:1080px;}.gmap_canvas {overflow:hidden;background:none!important;height:642px;width:1080px;}</style></div> -->
     </section>
     <section id="content">
       
@@ -87,11 +99,12 @@
           </div>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/dir//HR+Automotive+Service/data=!4m8!4m7!1m0!1m5!1m1!1s0x87df33d1f9382f83:0xf4e691658e23f97c!2m2!1d-90.3832698!2d38.6879243" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
       
-    </section>
  
   </div>
+  
+  <jsp:include page="footer.jsp"/> 
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
   
   <script src="static/vendor/jquery/jquery.min.js"></script>

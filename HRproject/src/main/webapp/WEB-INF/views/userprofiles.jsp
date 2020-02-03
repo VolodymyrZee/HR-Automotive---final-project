@@ -35,7 +35,7 @@
 <body>
   <div id="wrapper">
   
-   <%--  <jsp:include page="header.jsp"/> --%>
+ <jsp:include page="header.jsp"/> 
     
     <!-- end header -->
     <section id="inner-headline">
@@ -141,7 +141,7 @@
        
       </div>
     </section>
-   <%--   <jsp:include page="footer.jsp"/> --%>
+    <jsp:include page="footer.jsp"/> 
   </div>
   
        

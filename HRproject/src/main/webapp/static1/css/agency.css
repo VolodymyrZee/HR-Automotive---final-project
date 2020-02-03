@@ -184,7 +184,7 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #fed136;
+  color: #4959fe;
   outline: none;
 }
 .navbar-custom .navbar-nav > .active > a {
@@ -550,6 +550,13 @@ section h3.section-subheading {
 .team-member p {
   margin-top: 0;
 }
+
+
+
+
+
+
+
 aside.clients img {
   margin: 50px auto;
 }

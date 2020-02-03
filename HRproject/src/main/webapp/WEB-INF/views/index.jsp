@@ -8,7 +8,7 @@
 <title>Home</title>
 
   <link href="static1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="static1/css/custom.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -18,6 +18,8 @@
 
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
+   <!--  <link href="static1/css/agency.css" rel="stylesheet"> -->
+    
 </head>
 <body>
 
@@ -57,16 +59,36 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
+                    
+                    
+                          
+              <c:choose>
+			  <c:when test="${empty loggedInUser}">			  
+              <li><a href="register" class="page-scroll">Sign Up</a></li>
+              
+              <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
+               -->
+               <li><a href="login" class="page-scroll">Login</a></li>
+              </c:when>
+			  <c:otherwise>
+			  <li><a href="logout" class="page-scroll">Logout</a></li>
+			  <li><a href="profile" class="page-scroll">My Profile></a></li>
+			  </c:otherwise>
+			  </c:choose>
+              
+          
+                    
+                    <!-- <li>
                         <a class="page-scroll" href="login">Login</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="register">Sign Up</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="services">Services</a>
                     </li>
@@ -95,7 +117,17 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome to HR Automotive!</div>
                 <div class="intro-heading">How can we help?</div>
-                <a href="#services" class="page-scroll btn btn-xl">Schedule Service</a>
+               <!--  <a href="login" class="page-scroll btn btn-xl">Schedule Service</a> -->
+                
+                <c:choose>
+			  <c:when test="${empty loggedInUser}">			  
+              <a href="login" class="page-scroll btn btn-xl">Schedule Service</a>
+              </c:when>
+			  <c:otherwise>
+			  <a href="services" class="page-scroll btn btn-xl">Schedule Service</a>
+			  </c:otherwise>
+			  </c:choose>
+                
             </div>
         </div>
     </header>
@@ -237,7 +269,49 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    
+    
+                    <div class="shop">
+                        <img src="static1/img/HRpics/7.jpg" class="img-responsive " alt="">
+                      
+
+                    </div>
+                    
+                    <div class="shop">
+                        <img src="static1/img/HRpics/2.jpg" class="img-responsive " alt="">
+                        <h4>Our Shop</h4>
+                        <p class="text-muted">State of art facility</p>
+
+                    </div>
+                    
+                    <div class="shop">
+                        <img src="static1/img/HRpics/4.jpg" class="img-responsive " alt="">
+                        
+                        <p class="text-muted">Professional tools</p>
+
+                    </div>
+                    
+                    <div class="shop">
+                        <img src="static1/img/HRpics/8.jpg" class="img-responsive " alt="">
+                        
+                   
+
+                    </div>
+   
+<!-- <div class="shop">
+              <ul class="shop">
+                <li>
+                  <img src="static1/img/HRpics/1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="static1/img/HRpics/2.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="static1/img/HRpics/3.jpg" alt="" />
+                </li>
+              </ul>
+            </div> -->
+<section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -602,7 +676,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.jpg" alt="">
+                                <img class="img-responsive img-centered" src="static1/img/portfolio/escape-preview.jpg" alt="">
                                 <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -631,7 +705,7 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.jpg" alt="">
+                                <img class="img-responsive img-centered" src="static/img/portfolio/dreams-preview.jpg" alt="">
                                 <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>

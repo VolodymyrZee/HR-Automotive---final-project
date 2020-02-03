@@ -2,7 +2,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+ <link href="static1/css/styles.css" rel="stylesheet" />
+ <link href="static1/css/agency.css" rel="stylesheet" />
+   <link href="static1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="static1/css/custom.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="static1/css/agency.min.css" rel="stylesheet">
+    
 <header>
+
       <div class="container">
        
         <div class="row nomargin">
@@ -11,15 +26,15 @@
               <ul>              
               <c:choose>
 			  <c:when test="${empty loggedInUser}">			  
-              <li><a href="register" ><i class="icon-user"></i><h4>Sign Up</h4></a></li>
+              <li><a href="register" ><i class="icon-user"></i><h4></h4></a></li>
               
               <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
                -->
-               <li><a href="#mySignin" data-toggle="modal"><h4>Sign in</h4></a></li>
+               <li><a href="#mySignin" data-toggle="modal"><h4></h4></a></li>
               </c:when>
 			  <c:otherwise>
-			  <li><a href="logout"><h4>Logout</h4></a></li>
-			  <li><a href="profile"><h4>My Profile</h4></a></li>
+			  <li><a href="logout"><h4></h4></a></li>
+			  <li><a href="profile"><h4></h4></a></li>
 			  </c:otherwise>
 			  </c:choose>
               </ul>
@@ -30,7 +45,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 id="mySignupModalLabel">Create an <strong>account</strong></h4>
               </div>
-              <div class="modal-body">
+              <!-- <div class="modal-body"> -->
                 <%-- <form:form action="register" modelAttribute="user" method="post" class="form-horizontal">
                   
                   <div class="control-group">
@@ -55,11 +70,11 @@
                   </div>
                   
                   <div class="control-group">
-                    <label class="control-label" for="repeatepass">Re-enter Password*</label>
+                    <label class="control-label" for="repeatpassword">Re-enter Password*</label>
                     <div class="controls">
-                     <form:input type="password" path="repeatepass" placeholder="repeatepass" /> 
+                     <form:input type="password" path="repeatpassword" placeholder="repeatpassword" /> 
                     <div class="has-error">
-					  <form:errors path="repeatepass" class="text-error"/>
+					  <form:errors path="repeatpassword" class="text-error"/>
 					</div>
                     </div>
                     
@@ -107,7 +122,7 @@
                     
                   </div>
                 </form:form> --%>
-              </div>
+              <!-- </div> -->
             </div>
             <!-- end signup modal -->
             <!-- Sign in Modal -->
@@ -170,41 +185,82 @@
             <!-- end reset modal -->
           </div>
         </div>
-        <div class="row">
-          <div class="span4">
-            <div class="logo">
-              <a href="index">
-              </a>
-              <a href="index"><h1>HR Automotive </h1></a>
-            </div>
-          </div>
-          <div class="span8">
-            <div class="navbar navbar-static-top">
-              <div class="navigation">
-                <nav>
-                  <ul class="nav topnav">
-                    <li class="dropdown">
-                      <a href="index"><h3>Home </h3><i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="about">About</a></li>
-                        <li><a href="services">Contact</a></li>
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+
+          <!-- <div class="hidden-top">
+                <div class="hidden-top-inner container">
+                  <div class="row">
+                    <div class="span12">
+                      <ul>
+                        <li color: "yellow";><strong>We are available for any custom works this month</strong></li>
+                        <li>Main office: Springville center X264, Park Ave S.01</li>
+                        <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="about"><h3>About</h3> </a>
-                    </li>                  
-                    <li>
-                      <a href="services"><h3>Contact</h3> </a>
-                    </li>
-                    <c:if test="${not empty loggedInUser}">
-                      <li><a href="users"><h3>Users</h3></a></li>
-                    </c:if>
-                  </ul>
-                </nav>
-              </div>
-              <!-- end navigation -->
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index" >HR Automotive Services</a>
             </div>
-          </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    
+                    
+                          
+              <c:choose>
+			  <c:when test="${empty loggedInUser}">			  
+              <li><a href="register" class="page-scroll">Sign Up</a></li>
+              
+              <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
+               -->
+               <li><a href="login" class="page-scroll">Login</a></li>
+              </c:when>
+			  <c:otherwise>
+			  <li><a href="logout" class="page-scroll">Logout</a></li>
+			  <li><a href="profile" class="page-scroll">My Profile</a></li>
+			  </c:otherwise>
+			  </c:choose>
+              
+          
+                    
+                    <!-- <li>
+                        <a class="page-scroll" href="login">Login</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="register">Sign Up</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="services">Services</a>
+                    </li>
+                   
+                    <li>
+                        <a class="page-scroll" href="about">About</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
+
       </div>
     </header>
