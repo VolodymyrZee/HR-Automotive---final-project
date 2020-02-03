@@ -15,8 +15,6 @@ import com.myProject.HRproject.model.Users;
 import com.myProject.HRproject.repository.UserRepository;
 
 
-
-
 @Controller
 public class AppController {
 	
@@ -25,39 +23,26 @@ public class AppController {
 	
 	@Autowired
 	WebUtils webUtils;
-
-	@Autowired
-	private UserRepository userRepository;
 	
-	@GetMapping({"index", "/"})
-	
-	 public String index(Model model) {
-		model.addAttribute("msg","Hello. We are HR Automotive. Happy to have you with us!");
-		model.addAttribute("users",userRepository.findAll());
-		 return "index";
-		 
-	 }
+	@GetMapping({"index","/"})
+	public String index(Model model) {	
+	 model.addAttribute("msg", "Welcome to spring ");
+	 model.addAttribute("users", userService.findAll());
+	return "index";		
+	}
 	
 	@GetMapping("about")
-	
-	 public String about(Model model) {
-		model.addAttribute("msg","Professional diagnostic and reasonable prices. Egnine, Transmission, Suspension, Brakes, Perfomance and much more. We can do it all! Certified mechanics with years of experience. State of the art facility with new lifts and professional tools.");
-		
-		 return "about";
-		 
-	 }
-	
+	//@ResponseBody()
+	String about(Model model) {
+	model.addAttribute("msg", "this is about us page");
+	return "about";		
+	}
 	
 	@GetMapping("services")
-	
-	 public String services(Model model) {
-		model.addAttribute("msg"," We specialize in European vehicles and we can guarantee an exceptional experience while providing quality car maintenance and repairs. Your experience with HR Automotive Services will be unlike any other because of our quick, reliant, and efficient work. We know it can be difficult to find the perfect auto shop, but your search is over. After visiting HR Automotive Services you will be able to tell the difference.");
-		
-		 return "services";
-		 
-	 }
-	
-	
+	public String service(Model model) {
+	model.addAttribute("msg", "Get in touch with us by filling");
+	return "services";		
+	}
 	
 	@PostMapping("sendemail")
 	public String sendemail(Model model, @RequestParam String email,
@@ -75,15 +60,11 @@ public class AppController {
 		return "services";
 	}
 	
-	
 	@GetMapping("name")
-	
-	 public String name(@RequestParam int id, Model model) {
-		model.addAttribute("msg", id);
-		
-		 return "index";
-		 
-	 }
+	public String name(@RequestParam int id, Model model) {
+	model.addAttribute("msg", id);
+	return "index";		
+	}
 	
 	@GetMapping("getname-{id}")
 	public String getname(@PathVariable String id, Model model) {
@@ -98,34 +79,9 @@ public class AppController {
 		
 	return "index";		
 	}
+		
+	 
 	
-//	@GetMapping("Login")
-//	public String login(@RequestParam String fname, @RequestParam String lname, Model model) {
-//		model.addAttribute("msg", fname+" "+lname);
-//		return "index";
-//	}
 	
-//	@PostMapping("Login")
-//	public String login(@RequestParam String fname, @RequestParam String lname, Model model) {
-//		model.addAttribute("msg", fname+" "+lname);
-//		return "index";
-//	}
-	
-//	
-//	@GetMapping("register")
-//	public String register(Model model) {
-//		model.addAttribute("msg", "Register");
-//	model.addAttribute("user", new Users());    //user tag is model Attribute      initialize new Users
-//		return "register";
-//	}
-//	
-//	@PostMapping("register")
-//	public String register(@ModelAttribute Users user, Model model) {
-//		
-//	model.addAttribute("msg", user);    //user tag is model Attribute      initialize new Users
-//	model.addAttribute("users", user);  
-//	model.addAttribute("user", new Users());  
-//		return "register";
-//	
-//}
+
 }

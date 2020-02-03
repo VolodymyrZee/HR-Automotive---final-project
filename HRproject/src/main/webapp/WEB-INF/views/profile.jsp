@@ -8,7 +8,7 @@
 <c:set var="_profile" value="active"/>
 
 <c:if test="${empty loggedInUser}">
-<%-- <jsp:forward page="login.jsp"/> --%>
+<%-- <jsp:forward page="login.jsp"/>  --%>
 <%response.sendRedirect("login");%>
 </c:if>
 <!DOCTYPE html>
@@ -32,8 +32,36 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+<link href="static1/css/agency.min.css" rel="stylesheet">
+
+<link href="static1/css/styles2.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="static/css/bootstrap.css" rel="stylesheet" />
+  <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="static/css/jcarousel.css" rel="stylesheet" />
+  <link href="static/css/flexslider.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- Theme skin -->
+  <link href="static/skins/default.css" rel="stylesheet" />
+  <!-- boxed bg -->
+  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
+    
+    
+    
   <style type="text/css">
         img {
 		  border-radius: 50%;
@@ -71,7 +99,7 @@
         </div>
       </div>
     </section> --%>
-    <section id="content">
+    <section class="bgr" id="content">
       <div class="container">
         <div class="row">
           <div class="span9">
@@ -152,7 +180,7 @@
         <div class="span3 text-center">
         
         <c:if test="${not empty loggedInUser.image}">
-			<img src="static/img/users/${loggedInUser.id}/profile/${loggedInUser.image}" 
+			<img src="static1/img/users/${loggedInUser.id}/profile/${loggedInUser.image}" 
 				alt="Profile Image" style="height:150px; width: auto;">
 		</c:if>	
 			<span class="text-danger text-center">${error}</span>  
@@ -197,8 +225,9 @@
 	                  </div>
 	                </form>
               </div>
-            </div>
-                  
+              </div>
+              
+               
   <div id="addImages" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -238,7 +267,9 @@
 	                </form>
               </div>
             </div>
+            <section id="content">
              <jsp:include page="footer.jsp"/> 
+             </section>
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
   
   <script src="static1/vendor/jquery/jquery.min.js"></script>
@@ -255,7 +286,24 @@
 
     <!-- Theme JavaScript -->
     <script src="static1/js/agency.min.js"></script>
+ <script src="static/js/jquery.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+  <script src="static/js/jcarousel/jquery.jcarousel.min.js"></script>
+  <script src="static/js/jquery.fancybox.pack.js"></script>
+  <script src="static/js/jquery.fancybox-media.js"></script>
+  <script src="static/js/google-code-prettify/prettify.js"></script>
+  <script src="static/js/portfolio/jquery.quicksand.js"></script>
+  <script src="static/js/portfolio/setting.js"></script>
+  <script src="static/js/jquery.flexslider.js"></script>
+  <script src="static/js/jquery.nivo.slider.js"></script>
+  <script src="static/js/modernizr.custom.js"></script>
+  <script src="static/js/jquery.ba-cond.min.js"></script>
+  <script src="static/js/jquery.slitslider.js"></script>
+  <script src="static/js/animate.js"></script>
 
+  <!-- Template Custom JavaScript File -->
+  <script src="static1/js/custom.js"></script>
 </body>
 
 </html>

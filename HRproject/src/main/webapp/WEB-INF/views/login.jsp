@@ -2,9 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
-<%-- <c:if test="${not empty loggedInUser}">
+<c:if test="${not empty loggedInUser}">
 <%response.sendRedirect("profile");%>
-</c:if> --%>
+</c:if> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
  -->
     <!-- Custom Fonts -->
     <link href="static1/css/bootstrap.css" rel="stylesheet" />
-      <link href="static1/css/style2.css" rel="stylesheet" />
+      
         <link href="static1/css/flexslider.css" rel="stylesheet" />
         <link href="static1/css/bootstrap-responsive.css" rel="stylesheet" />
         <link href="static1/css/jcarousel.css" rel="stylesheet" />
@@ -33,6 +33,7 @@
 
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
+       <link href="static1/css/styles.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -43,33 +44,14 @@
     
  <jsp:include page="header.jsp"/> 
     <!-- end header -->
-    <section id="inner-headline">
-      <div class="container">
-        <div class="row">
-          <div class="span4">
-            <div class="inner-heading">
-              <h2>Login
-              
-              </h2>
-            </div>
-          </div>
-          <div class="span8">
-            <ul class="breadcrumb">
-              <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li><a href="index">Home</a><i class="icon-angle-right"></i></li>
-              <li class="active">Login</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <section id="content">
       <div class="container">
         <div class="row">
           <div class="span6">
-           <h3 class="text-center">${msg} 
+           <h3 style="color:green;"class="text-center-green">${msg}</h3> 
            
-           </h3> 
+         
 			<form action="login" method="post" class="form-horizontal">
                   <h3 class="text-center">
                   <span class="text-success"> ${success}</span>

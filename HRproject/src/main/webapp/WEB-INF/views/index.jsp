@@ -69,15 +69,16 @@
                           
               <c:choose>
 			  <c:when test="${empty loggedInUser}">			  
-              <li><a href="register" class="page-scroll">Sign Up</a></li>
+              
               
               <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
                -->
                <li><a href="login" class="page-scroll">Login</a></li>
+               <li><a href="register" class="page-scroll">Sign Up</a></li>
               </c:when>
 			  <c:otherwise>
 			  <li><a href="logout" class="page-scroll">Logout</a></li>
-			  <li><a href="profile" class="page-scroll">My Profile></a></li>
+			  <li><a href="profile" class="page-scroll">My Profile</a></li>
 			  </c:otherwise>
 			  </c:choose>
               

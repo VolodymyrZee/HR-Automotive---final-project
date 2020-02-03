@@ -213,26 +213,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-center">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+               
                     
-                    
-                          
-              <c:choose>
-			  <c:when test="${empty loggedInUser}">			  
-              <li><a href="register" class="page-scroll">Sign Up</a></li>
               
-              <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
-               -->
-               <li><a href="login" class="page-scroll">Login</a></li>
-              </c:when>
-			  <c:otherwise>
-			  <li><a href="logout" class="page-scroll">Logout</a></li>
-			  <li><a href="profile" class="page-scroll">My Profile</a></li>
-			  </c:otherwise>
-			  </c:choose>
               
           
                     
@@ -242,6 +229,11 @@
                     <li>
                         <a class="page-scroll" href="register">Sign Up</a>
                     </li> -->
+                    
+                    
+                    <li>
+                        <a class="page-scroll" href="index">HOME</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="services">Services</a>
                     </li>
@@ -255,6 +247,25 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    
+                   
+                                
+              <c:choose>
+			  <c:when test="${empty loggedInUser}">			  
+             
+              
+              <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
+               -->
+               <li><a href="login" class="page-scroll">Login</a></li>
+                <li><a href="register" class="page-scroll">Sign Up</a></li>
+              </c:when>
+			  <c:otherwise>
+			  
+			  <li><a href="profile" class="page-scroll">My Profile</a></li>'
+			  <li><a href="logout" class="page-scroll">Logout</a></li>
+			  </c:otherwise>
+			  </c:choose>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

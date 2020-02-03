@@ -45,7 +45,14 @@ public class Users {
 	@Transient
 	MultipartFile file;
 	private String image;
+	private String code;
 	
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
 	public String getRole() {
 		return role;
 	}
@@ -141,8 +148,9 @@ public class Users {
 		return "Users [id=" + id + ", lname=" + lname + ", fname=" + fname + ", phone=" + phone + ", email=" + email
 				+ ", password=" + password + ", repeatpassword=" + repeatpassword + ", carYear=" + carYear
 				+ ", carMake=" + carMake + ", carModel=" + carModel + ", carColor=" + carColor + ", carLicensePlate="
-				+ carLicensePlate + ", role=" + role + ", file=" + file + ", image=" + image + "]";
+				+ carLicensePlate + ", role=" + role + ", file=" + file + ", image=" + image + ", code=" + code + "]";
 	}
+	
 	
 	
 	

@@ -21,6 +21,7 @@ import com.myProject.HRproject.WebUtils;
 import com.myProject.HRproject.model.Users;
 import com.myProject.HRproject.repository.UserRepository;
 
+
 @Controller
 @SessionAttributes("loggedInUser")
 public class LoginController {

@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.myProject.HRproject.controller.UploadController;
 import com.myProject.HRproject.WebUtils;
 import com.myProject.HRproject.model.Users;
 import com.myProject.HRproject.repository.UserRepository;
 import com.myProject.HRproject.service.UserService;
-
 @Controller
 @SessionAttributes("loggedInUser")
 public class UploadController {
@@ -65,7 +65,7 @@ public class UploadController {
 			//e.printStackTrace);
 		}
 
-		return "profile";
+		return "redirect:/profile";
 	}
 	
 	
