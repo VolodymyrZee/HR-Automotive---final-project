@@ -8,7 +8,7 @@
 <c:set var="_profile" value="active"/>
 
 <c:if test="${empty loggedInUser}">
-<%-- <jsp:forward page="login.jsp"/> --%>
+<%-- <jsp:forward page="login.jsp"/>  --%>
 <%response.sendRedirect("login");%>
 </c:if>
 <!DOCTYPE html>
@@ -21,8 +21,28 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <!-- css -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <title>Home</title>
+
+  <link href="static1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+<link href="static1/css/agency.min.css" rel="stylesheet">
+
+<link href="static1/css/styles2.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="static1/css/agency.min.css" rel="stylesheet">
+    
+    
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="static/css/bootstrap.css" rel="stylesheet" />
   <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
   <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -39,7 +59,9 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
   <link rel="shortcut icon" href="ico/favicon.png" />
-
+    
+    
+    
   <style type="text/css">
         img {
 		  border-radius: 50%;
@@ -49,26 +71,11 @@
 
 <body>
   <div id="wrapper">
-    <!-- toggle top area -->
-    <div class="hidden-top">
-      <div class="hidden-top-inner container">
-        <div class="row">
-          <div class="span12">
-            <ul>
-              <li><strong>We are available for any custom works this month</strong></li>
-              <li>Main office: Springville center X264, Park Ave S.01</li>
-              <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end toggle top area -->
-    <!-- start header -->
-    <jsp:include page="header.jsp"/>
+    
+   <jsp:include page="header.jsp"/>
     
     <!-- end header -->
-    <section id="inner-headline">
+    <%-- <section id="inner-headline">
       <div class="container">
         <div class="row">
           <div class="span4">
@@ -76,16 +83,13 @@
               <h2>Profile</h2>
             </div>
           </div>
-           <c:if test="${loggedInUser.role eq 'ADMIN'}">                 
-                  <form class="form-search" action="search" method="post">
-                  <input name="name" placeholder="Type something" type="text" class="input-medium search-query">
-                  <button type="submit" class="btn btn-square btn-theme">Search</button>
-                </form>
-                  </c:if>        
           <div class="span8">
             <ul class="breadcrumb">
               <li class="nav-item text-left">
-			    
+			    <form class="form-search" action="search" method="post">
+                  <input name="name" placeholder="Type something" type="text" class="input-medium search-query">
+                  <button type="submit" class="btn btn-square btn-theme">Search</button>
+                </form>
 			  </li>
               <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
               <li><a href="index">Home</a><i class="icon-angle-right"></i></li>
@@ -94,8 +98,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="content">
+    </section> --%>
+    <section class="bgr" id="content">
       <div class="container">
         <div class="row">
           <div class="span9">
@@ -165,7 +169,7 @@
                   </div>
                   <div class="tab-pane" id="three">
                     <p>
-                      Cu cum commodo regione definiebas. Cum ea eros laboramus, audire deseruisse his at, munere aeterno ut quo. Et ius doming causae philosophia, vitae bonorum intellegat usu cu.
+                      Text in Profile that you can easily change in profile.jsp. Just go for it. 
                     </p>
                   </div>
                   
@@ -176,7 +180,7 @@
         <div class="span3 text-center">
         
         <c:if test="${not empty loggedInUser.image}">
-			<img src="static/img/users/${loggedInUser.id}/profile/${loggedInUser.image}" 
+			<img src="static1/img/users/${loggedInUser.id}/profile/${loggedInUser.image}" 
 				alt="Profile Image" style="height:150px; width: auto;">
 		</c:if>	
 			<span class="text-danger text-center">${error}</span>  
@@ -195,7 +199,7 @@
        </div>
       </div>
     </section>
-     <jsp:include page="footer.jsp"/>
+    <%--  <jsp:include page="footer.jsp"/> --%>
   </div>
   
   <div id="add-images" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
@@ -221,8 +225,9 @@
 	                  </div>
 	                </form>
               </div>
-            </div>
-                  
+              </div>
+              
+               
   <div id="addImages" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -262,12 +267,26 @@
 	                </form>
               </div>
             </div>
-            
+            <section id="content">
+             <jsp:include page="footer.jsp"/> 
+             </section>
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
-  <!-- javascript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="static/js/jquery.js"></script>
+  
+  <script src="static1/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static1/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="static1/js/jqBootstrapValidation.js"></script>
+    <script src="static1/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="static1/js/agency.min.js"></script>
+ <script src="static/js/jquery.js"></script>
   <script src="static/js/jquery.easing.1.3.js"></script>
   <script src="static/js/bootstrap.js"></script>
   <script src="static/js/jcarousel/jquery.jcarousel.min.js"></script>
@@ -284,8 +303,7 @@
   <script src="static/js/animate.js"></script>
 
   <!-- Template Custom JavaScript File -->
-  <script src="static/js/custom.js"></script>
-
+  <script src="static1/js/custom.js"></script>
 </body>
 
 </html>

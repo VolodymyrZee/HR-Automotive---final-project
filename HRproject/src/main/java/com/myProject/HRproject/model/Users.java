@@ -1,29 +1,35 @@
 package com.myProject.HRproject.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.springframework.web.multipart.MultipartFile;
 
+
+
 @Entity
 @Table(name="users")
 public class Users {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
-
-	private long id;
+	
+	
+	
 	@Column(name="lastName")
     private String lname;
 	@Column(name="firstName")
 	private String fname;
 	@Column(name="phone")
 	private String phone;
+	
+	@Id
 	@Column(name="email")
 	private String email;
 	@Column(name="password")
@@ -31,16 +37,11 @@ public class Users {
 	@Transient                                       //sth you want to use for validation
 	private String repeatpassword;   // repeat password
 	
-	@Column(name="carYear")
-	private String carYear;
-	@Column(name="carMake")
-	private String carMake;
-	@Column(name="carModel")
-	private String carModel;
-	@Column(name="carColor")
-	private String carColor;
-	@Column(name="carLicensePlate")
-	private String carLicensePlate;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="car_service_id", referencedColumnName = "id")
+	private CarService carService;
+
+	
 	private String role;
 	@Transient
 	MultipartFile file;
@@ -71,12 +72,7 @@ public class Users {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
+
 	public String getLname() {
 		return lname;
 	}
@@ -113,43 +109,14 @@ public class Users {
 	public void setRepeatpassword(String repeatpassword) {
 		this.repeatpassword = repeatpassword;
 	}
-	public String getCarYear() {
-		return carYear;
+	public CarService getCarService() {
+		return carService;
 	}
-	public void setCarYear(String carYear) {
-		this.carYear = carYear;
+	public void setCarService(CarService carService) {
+		this.carService = carService;
 	}
-	public String getCarMake() {
-		return carMake;
-	}
-	public void setCarMake(String carMake) {
-		this.carMake = carMake;
-	}
-	public String getCarModel() {
-		return carModel;
-	}
-	public void setCarModel(String carModel) {
-		this.carModel = carModel;
-	}
-	public String getCarColor() {
-		return carColor;
-	}
-	public void setCarColor(String carColor) {
-		this.carColor = carColor;
-	}
-	public String getCarLicensePlate() {
-		return carLicensePlate;
-	}
-	public void setCarLicensePlate(String carLicensePlate) {
-		this.carLicensePlate = carLicensePlate;
-	}
-	@Override
-	public String toString() {
-		return "Users [id=" + id + ", lname=" + lname + ", fname=" + fname + ", phone=" + phone + ", email=" + email
-				+ ", password=" + password + ", repeatpassword=" + repeatpassword + ", carYear=" + carYear
-				+ ", carMake=" + carMake + ", carModel=" + carModel + ", carColor=" + carColor + ", carLicensePlate="
-				+ carLicensePlate + ", role=" + role + ", file=" + file + ", image=" + image + ", code=" + code + "]";
-	}
+	
+	
 	
 	
 	
