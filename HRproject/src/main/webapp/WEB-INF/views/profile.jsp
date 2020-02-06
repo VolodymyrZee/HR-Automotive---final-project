@@ -50,7 +50,7 @@
 <body>
   <div id="wrapper">
     <!-- toggle top area -->
-    <div class="hidden-top">
+    <!-- <div class="hidden-top">
       <div class="hidden-top-inner container">
         <div class="row">
           <div class="span12">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- end toggle top area -->
     <!-- start header -->
     <jsp:include page="header.jsp"/>
@@ -82,7 +82,7 @@
                   <button type="submit" class="btn btn-square btn-theme">Search</button>
                 </form>
                   </c:if>        
-          <div class="span8">
+          <!-- <div class="span8">
             <ul class="breadcrumb">
               <li class="nav-item text-left">
 			    
@@ -91,7 +91,7 @@
               <li><a href="index">Home</a><i class="icon-angle-right"></i></li>
               <li class="active">Profile</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -102,25 +102,26 @@
             <h4>
             <c:if test="${not emptyloggedInUser.email}">
             <button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#addImages">
-			 <i class="fas fa-plus"> Upload Images</i> 
+			 <i style="color: black" class="fas fa-plus"> Upload Images</i> 
 			</button>
 			</c:if>
             </h4>
-                <p class="text-info"><small>${msg} ${sucess}</small></p>
+                <p style="color: black" class="text-info"><h3>${msg} ${sucess}</h3></p>
                 <ul class="nav nav-tabs bold">
                   <li class="active"><a href="#one" data-toggle="tab">
                   <i class="icon-info-sign"></i> Contact Info</a></li>
                   <li class=""><a href="#two" data-toggle="tab">
                   <i class="icon-pencil"></i>Update Profile</a></li>
-                  <li class=""><a href="#three" data-toggle="tab"></a>
+                  <li class=""><a href="#three" data-toggle="tab">
+                  <i class="icon-pen"></i>Add Car</a></li>
                   
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="one">                    
                     <p>
                     
-                     ${loggedInUser.fname} ${loggedInUser.lname}<br>
-                     ${loggedInUser.phone} <br>${loggedInUser.email}
+                   <strong> Name: </strong> ${loggedInUser.fname} ${loggedInUser.lname}<br>
+                  <strong> Phone: </strong> ${loggedInUser.phone} <br><strong>Email: </strong> ${loggedInUser.email}
                      
                     </p>
                   </div>
@@ -163,10 +164,67 @@
                   </div>
                 </form:form>
                   </div>
-                  <div class="tab-pane" id="three">
-                    <p>
-                      Cu cum commodo regione definiebas. Cum ea eros laboramus, audire deseruisse his at, munere aeterno ut quo. Et ius doming causae philosophia, vitae bonorum intellegat usu cu.
-                    </p>
+                  <div class="tab-pane" id="three">  
+                  
+                  
+                   <!------------------------------------- add car ---------------------------------------- -->
+                   
+                   
+                    
+                 <form:form action="addcar" modelAttribute="car" method="post" class="form-horizontal">
+                  <h3 class="text-center">
+                  <span class="text-success"> ${success}</span></h3>
+                  
+                  
+                  <div class="control-group ${hidden}">
+                    <label class="control-label" for="year">Year</label>
+                   <div class="controls">
+                     <form:input type="text" path="year" placeholder="Car Year" /> 
+                    </div>
+                     </div>
+                  
+                  
+                  <div class="control-group ${hidden}">
+                    <label class="control-label" for="make">Make</label>
+                   <div class="controls">
+                     <form:input type="text" path="make" placeholder="Car Make" /> 
+                    </div>
+                     </div>
+                     
+                     
+                  <div class="control-group ${hidden}">
+                    <label class="control-label" for="model">Model</label>
+                   <div class="controls">
+                     <form:input type="text" path="model" placeholder="Car Model" /> 
+                    </div>
+                     </div>
+                     
+                     
+                  <div class="control-group ${hidden}">
+                    <label class="control-label" for="color">Color</label>
+                   <div class="controls">
+                     <form:input type="text" path="color" placeholder="Car Color" /> 
+                    </div>
+                     </div>
+                     
+                     
+                  <div class="control-group ${hidden}">
+                    <label class="control-label" for="licensePlate">License Plate</label>
+                   <div class="controls">
+                     <form:input type="text" path="licensePlate" placeholder="Car License Plate" /> 
+                    </div>
+                     </div>
+                  
+                  <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" id="submit" class="btn btn-danger">Submit</button>
+                      <a href="profile" class="btn btn-success">Cancel</a>
+                    
+                    </div>
+                    
+                  </div>
+                  
+                </form:form>
                   </div>
                   
                   
@@ -185,7 +243,7 @@
 				Change Photo <i class="fa fa-pencil"></i></a>
 			</c:if>
 			<c:if test="${empty loggedInUser.image}">
-			<a  href="#" data-toggle="modal" data-target="#add-images" 
+			<a style="color: black"  href="#" data-toggle="modal" data-target="#add-images" 
 			class="btn btn-danger">
 			Add Image</a>
 			</c:if>

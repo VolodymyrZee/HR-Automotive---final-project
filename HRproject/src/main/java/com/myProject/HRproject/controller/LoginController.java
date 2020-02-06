@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.myProject.HRproject.service.UserService;
 import com.myProject.HRproject.validaition.DataValidation;
 import com.myProject.HRproject.WebUtils;
-
+import com.myProject.HRproject.model.Cars;
 import com.myProject.HRproject.model.Users;
 import com.myProject.HRproject.repository.UserRepository;
 
@@ -62,26 +62,29 @@ public class LoginController {
 	@GetMapping("profile")
 	public String profile(Model model) {
 		model.addAttribute("msg", "Welcome back");
+		model.addAttribute("car", new Cars());
+		
 		return "profile";		
 	}
 	
 	@PostMapping("login")
-	public String signin(@RequestParam String email, 
+	public String signin(@RequestParam String email, WebRequest request,  
 			      @RequestParam String password, Model model) {
 		try {
 			Users user=userService.findByEmail(email).get();
 			if(user !=null && password.equals(user.getPassword())) {
 				model.addAttribute("msg", "Welcome "+email);
 				model.addAttribute("loggedInUser", user);	
+				request.setAttribute("loggedInUser", user, WebRequest.SCOPE_SESSION);
 			}else {
 				model.addAttribute("error", "Invalid Credentials");
-				return "login";
+				return "redirect:/login";
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "profile";		
+		return "redirect:/profile";		
 	}
 	
 	@PostMapping("search")
@@ -189,6 +192,13 @@ public class LoginController {
 		}
 		return "profile";		
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	@GetMapping("logout")
 	public String logout(Model model, WebRequest request, 

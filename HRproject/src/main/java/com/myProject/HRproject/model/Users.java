@@ -21,6 +21,9 @@ import org.springframework.web.multipart.MultipartFile;
 public class Users {
 	
 	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id") 
+	private Long id;
 	
 	@Column(name="lastName")
     private String lname;
@@ -29,18 +32,13 @@ public class Users {
 	@Column(name="phone")
 	private String phone;
 	
-	@Id
-	@Column(name="email")
+	@Column(name="email", unique=true)
 	private String email;
 	@Column(name="password")
 	private String password;
 	@Transient                                       //sth you want to use for validation
 	private String repeatpassword;   // repeat password
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="car_service_id", referencedColumnName = "id")
-	private CarService carService;
-
 	
 	private String role;
 	@Transient
@@ -109,11 +107,11 @@ public class Users {
 	public void setRepeatpassword(String repeatpassword) {
 		this.repeatpassword = repeatpassword;
 	}
-	public CarService getCarService() {
-		return carService;
+	public Long getId() {
+		return id;
 	}
-	public void setCarService(CarService carService) {
-		this.carService = carService;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	
