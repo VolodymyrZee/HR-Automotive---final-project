@@ -49,7 +49,7 @@
       <div class="container">
         <div class="row">
           <div class="span6">
-           <h3 style="color:green;"class="text-center-green">${msg}</h3> 
+           <h3 style="color:#fed136;"class="text-center-green">${msg}</h3> 
            
          
 			<form action="login" method="post" class="form-horizontal">
