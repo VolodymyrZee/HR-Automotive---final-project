@@ -178,7 +178,7 @@
 						<!-- <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li> -->
-						<li><a class="page-scroll" href="users">Users</a></li>
+						
 
 
 
@@ -195,6 +195,7 @@
 
 								<li><a href="profile" class="page-scroll">My Profile</a></li>
 								<li><a href="mycars" class="page-scroll">My Cars</a></li>
+								<li><a class="page-scroll" href="users">Users</a></li>
 								<li><a href="logout" class="page-scroll">Logout</a></li>
 							</c:otherwise>
 						</c:choose>

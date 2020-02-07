@@ -82,7 +82,7 @@ img {
 		</section>
 		<section id="content">
 			<div>
-				<div class="row">
+				<%-- <div class="row">
 					<c:forEach var="car" items="${cars}">
 						<div class="span4">
 							<h3>${car.year} ${car.make} ${car.model} </h3>
@@ -90,7 +90,72 @@ img {
 					</c:forEach>
 
 
-				</div>
+				</div> --%>
+				<section id="content">
+      <div class="container">
+        <!-- Default table -->
+        <div class="row">
+          <div class="span12">
+            <h4>Car Lists
+            ${msg} ${sucess}
+            </h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Year</th>
+                  <th>Make</th>
+                  <%-- <c:if test="${loggedInUser.role eq 'ADMIN'}">  </c:if>    --%>            
+                  <th>Model</th>
+                  <th>Color</th>
+                   <th>License Plate</th>
+                                 
+                </tr>
+              </thead>
+              <tbody>
+                <c:forEach var="item" items="${cars}" >
+                <tr>
+                  <td>
+                    ${cars.indexOf(item)+1}.
+                  </td>            
+                  
+                  <td>
+                  ${item.year}
+                 
+                  </td>
+                  <td>
+                      ${item.make}
+                  </td>
+                  <td>
+                    ${item.model}
+                  </td>
+                  <td>
+                    ${item.color}
+                  </td>
+                  <td>
+                    ${item.licensePlate}
+                  </td>
+                 
+                </tr>
+                </c:forEach>
+                
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline">
+            </div>
+          </div>
+        </div>
+        <!-- end divider -->
+        
+
+      </div>
+    </section>
 
 			</div>
 		</section>

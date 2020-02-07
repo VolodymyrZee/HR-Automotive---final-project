@@ -152,16 +152,16 @@ public class WebUtils{
 	   public void getFiles(Model model, long id) {
 	    	List<String> results = new ArrayList<String>();
 			try {
-				String realPathtoUploads = 
-				request.getSession().getServletContext().getRealPath(UPLOADED_FOLDER+ File.separator +"users");
-						
-				File[] files = new File(realPathtoUploads + File.separator + id).listFiles();
-			   for (File file : files) {
-				    if (file.isFile()) {
-				        results.add(file.getName());
-				        model.addAttribute("filenames", results);
-				     }				   
-				}
+//				String realPathtoUploads = 
+//				request.getSession().getServletContext().getRealPath(UPLOADED_FOLDER+ File.separator +"users");
+//						
+//				File[] files = new File(realPathtoUploads + File.separator + id).listFiles();
+//			   for (File file : files) {
+//				    if (file.isFile()) {
+//				        results.add(file.getName());
+//				        model.addAttribute("filenames", results);
+//				     }				   
+//				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

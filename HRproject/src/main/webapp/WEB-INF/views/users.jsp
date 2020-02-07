@@ -22,8 +22,8 @@
 
 <!--   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  -->
-    <!-- Custom Fonts -->
-    <link href="static1/css/bootstrap.css" rel="stylesheet" />
+    <!-- <!-- Custom Fonts -->
+    <!-- <link href="static1/css/bootstrap.css" rel="stylesheet" />
       <link href="static1/css/style2.css" rel="stylesheet" />
         <link href="static1/css/flexslider.css" rel="stylesheet" />
         <link href="static1/css/bootstrap-responsive.css" rel="stylesheet" />
@@ -36,8 +36,24 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Theme CSS -->
-    <link href="static1/css/agency.min.css" rel="stylesheet">
+    Theme CSS
+    <link href="static1/css/agency.min.css" rel="stylesheet"> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="static/css/bootstrap.css" rel="stylesheet" />
+  <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="static/css/jcarousel.css" rel="stylesheet" />
+  <link href="static/css/flexslider.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- Theme skin -->
+  <link href="static/skins/default.css" rel="stylesheet" />
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="static/ico/favicon.png" />
   
   <style type="text/css">
         img {
@@ -67,9 +83,9 @@
                   <button type="submit" class="btn btn-square btn-theme">Search</button>
                 </form>
 			  </li>
-              <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li><a href="index">Home</a><i class="icon-angle-right"></i></li>
-              <li class="active">Users</li>
+         
+            
+            
             </ul>
           </div>
         </div>
@@ -144,7 +160,7 @@
                    </td>
                    <td>
                   <a href="update?id=${item.id}" class="text-success"> <i class="icon-pencil"></i></a>
-                  <a href="delete?id=${item.id}" onclick="confirmed(); return false;" > <i class="icon-trash"></i></a>
+                  <a href="delete?id=${item.id}" style="color:red" onclick="confirmed(); return false;" > <i class="icon-trash"></i></a>
                    </td>
                   </c:if>
                 </tr>
@@ -174,20 +190,41 @@
   
   <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
   
-  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <!-- <script src="static/vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+    Bootstrap Core JavaScript
     <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
+    Plugin JavaScript
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
-    <!-- Contact Form JavaScript -->
+    Contact Form JavaScript
     <script src="static/js/jqBootstrapValidation.js"></script>
     <script src="static/js/contact_me.js"></script>
 
-    <!-- Theme JavaScript -->
+    Theme JavaScript
     <script src="static/js/agency.min.js"></script>
+     -->
+    
+    <script src="static/js/jquery.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+  <script src="static/js/jcarousel/jquery.jcarousel.min.js"></script>
+  <script src="static/js/jquery.fancybox.pack.js"></script>
+  <script src="static/js/jquery.fancybox-media.js"></script>
+  <script src="static/js/google-code-prettify/prettify.js"></script>
+  <script src="static/js/portfolio/jquery.quicksand.js"></script>
+  <script src="static/js/portfolio/setting.js"></script>
+  <script src="static/js/jquery.flexslider.js"></script>
+  <script src="static/js/jquery.nivo.slider.js"></script>
+  <script src="static/js/modernizr.custom.js"></script>
+  <script src="static/js/jquery.ba-cond.min.js"></script>
+  <script src="static/js/jquery.slitslider.js"></script>
+  <script src="static/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="static/js/custom.js"></script>
+    
   
     <script>
 	    function confirmed(){
