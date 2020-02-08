@@ -82,102 +82,129 @@ img {
 		</section>
 		<section id="content">
 			<div>
-				<%-- <div class="row">
-					<c:forEach var="car" items="${cars}">
-						<div class="span4">
-							<h3>${car.year} ${car.make} ${car.model} </h3>
-						</div>
-					</c:forEach>
-
-
-				</div> --%>
+				<div class="row">
+					<div class="span2"></div>
+					<div class="span4">
+						<h3>${car.make} - ${car.model} ${car.year}</h3>
+					</div>
+				</div>
 				<section id="content">
-      <div class="container">
-        <!-- Default table -->
-        <div class="row">
-          <div class="span12">
-            <h4>Car Lists
-            ${msg} ${sucess}
-            </h4>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Year</th>
-                  <th>Make</th>
-                  <%-- <c:if test="${loggedInUser.role eq 'ADMIN'}">  </c:if>    --%>            
-                  <th>Model</th>
-                  <th>Color</th>
-                   <th>License Plate</th>
-                   <th>click</th>
-                                 
-                </tr>
-              </thead>
-              <tbody>
-                <c:forEach var="item" items="${cars}" >
-                <tr>
-                  <td>
-                    ${cars.indexOf(item)+1}.
-                  </td>            
-                  
-                  <td>
-                  ${item.year}
-                 
-                  </td>
-                  <td>
-                      ${item.make}
-                  </td>
-                  <td>
-                    ${item.model}
-                  </td>
-                  <td>
-                    ${item.color}
-                  </td>
-                  <td>
-                    ${item.licensePlate}
-                  </td>
-                 <td>
-                 <li class="">
-                 	<a href="mycarServices?carId=${item.id}" >Service Car</a>
-                  </li>
-                 </td>
-                </tr>
-                </c:forEach>
-                
-              </tbody>
-            </table>
-          </div>
-          
-        </div>
-        <!-- divider -->
-        <div class="row">
-          <div class="span12">
-            <div class="solidline">
-            </div>
-          </div>
-        </div>
-        <!-- end divider -->
-        
+					<div class="container">
+						<!-- Default table -->
+						<div class="row">
+							<div class="span12">
+								<h4>Services List ${msg} ${sucess}</h4>
+								<table class="table table-striped">
+									<thead>
+										<tr>
 
-      </div>
-    </section>
+											<th>#</th>
+											<th>Service Description</th>
+											<th>Service Request Date</th>
+
+											<%-- <c:if test="${loggedInUser.role eq 'ADMIN'}">  </c:if>    --%>
+											<th>Is Service completed</th>
+
+
+
+										</tr>
+									</thead>
+									<tbody>
+										<c:forEach var="item" items="${carServices}">
+											<tr>
+
+												<td>${carservice.indexOf(item)+1}.</td>
+
+												<td>${item.serviceDescription}</td>
+												<td>${item.serviceRequestDate}</td>
+												<td>${item.serviceCompleted}</td>
+
+
+
+											</tr>
+										</c:forEach>
+
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+						<!-- divider -->
+						<div class="row">
+							<div class="span12">
+								<div class="solidline"></div>
+
+								<!------------------------------------- add service ---------------------------------------- -->
+
+								<form action="addcarservice" method="post" class="form-horizontal">
+									<input type="hidden" value="${car.id}" name="carId" />
+									<h3 class="text-center">
+										<span class="text-success"> ${success}</span>
+									</h3>
+
+
+									<div class="control-group ${hidden}">
+										<label class="control-label" for="serviceDescription">Service
+											Description</label>
+										<div class="controls">
+											<select  name="serviceDescription">
+												<option>Oil Change</option>
+												<option>Tire rotation</option>
+											</select>
+										</div>
+									</div>
+
+
+
+
+
+									<div class="control-group ${hidden}">
+										<label class="control-label" for="serviceRequestDate">Request
+											Date</label>
+										<div class="controls">
+											<input type="date" name="serviceRequestDate" />
+										</div>
+									</div>
+
+
+									<div class="control-group ${hidden}">
+										<label class="control-label" for="serviceCompleted">Is
+											Service Completed</label>
+										<div class="controls">
+											<input type="checkbox" name="serviceCompleted" />
+										</div>
+									</div>
+
+
+
+
+									<div class="control-group">
+										<div class="controls">
+											<button type="submit" id="submit" class="btn btn-danger">Submit</button>
+											<a href="profile" class="btn btn-success">Cancel</a>
+
+										</div>
+
+									</div>
+
+								</form>
+
+							</div>
+						</div>
+						<!-- end divider -->
+
+
+					</div>
+				</section>
 
 			</div>
 		</section>
-		
-		
-		   <div class="tab-pane" id="one">  
-                  
-                  
-             
-                  </div>
-		
 		<jsp:include page="footer.jsp" />
 	</div>
 
-	
 
-	
+
+
 
 	<a href="#" class="scrollup"><i
 		class="icon-chevron-up icon-square icon-32 active"></i></a>

@@ -17,6 +17,8 @@ public class CarServices {
 	@Column(name = "id")
 	private Long id;
 	private String serviceDescription;
+	private String serviceRequestDate;
+	private String serviceFulfillmentDate;
 	private boolean serviceCompleted;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -53,6 +55,22 @@ public class CarServices {
 
 	public void setServiceCar(Cars serviceCar) {
 		this.serviceCar = serviceCar;
+	}
+
+	public String getServiceRequestDate() {
+		return serviceRequestDate;
+	}
+
+	public void setServiceRequestDate(String serviceRequestDate) {
+		this.serviceRequestDate = serviceRequestDate;
+	}
+
+	public String getServiceFulfillmentDate() {
+		return serviceFulfillmentDate;
+	}
+
+	public void setServiceFulfillmentDate(String serviceFulfillmentDate) {
+		this.serviceFulfillmentDate = serviceFulfillmentDate;
 	}
 	
 	

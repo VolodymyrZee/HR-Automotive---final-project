@@ -1,5 +1,7 @@
 package com.myProject.HRproject.controller;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +17,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myProject.HRproject.WebUtils;
 import com.myProject.HRproject.service.CarService;
+import com.myProject.HRproject.service.CarServicesService;
 import com.myProject.HRproject.service.UserService;
 import com.myProject.HRproject.validaition.DataValidation;
+import com.myProject.HRproject.model.CarServices;
 import com.myProject.HRproject.model.Cars;
 import com.myProject.HRproject.model.Users;
 import com.myProject.HRproject.repository.UserRepository;
@@ -29,6 +33,8 @@ public class AppController {
 
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private CarServicesService carServicesService;
 	@Autowired
 	private CarService carService;
 
@@ -77,6 +83,50 @@ public class AppController {
 		}
 		return "redirect:/profile";
 	}
+	
+	@GetMapping("mycarServices")
+	public String mycarServices(@RequestParam long carId, Model model, @SessionAttribute Users loggedInUser) {
+		Cars car = carService.findByCarId(carId).get();
+		model.addAttribute("car", car);
+		model.addAttribute("carServices", carServicesService.findAllByCarServices(car));
+		model.addAttribute("carService", new CarServices());
+		return "mycarServices";
+	}
+	
+	@PostMapping("addcarservice")
+	public String addcarservice(@RequestParam long carId, @RequestParam String serviceDescription, 
+			@RequestParam String serviceRequestDate, Model model, RedirectAttributes redirect,
+			@SessionAttribute Users loggedInUser) {
+		Cars car = carService.findByCarId(carId).get();
+		if (car != null) {
+			CarServices carService = new CarServices();
+			carService.setServiceCar(car);
+			carService.setServiceDescription(serviceDescription);
+			carService.setServiceRequestDate(serviceRequestDate);
+			carServicesService.savecarServices(carService);
+			redirect.addFlashAttribute("success", "Car service added");
+		} else {
+			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
+		}
+//		redirect.addAttribute("carId", carId);
+		return "redirect:/mycarServices?carId="+carId;
+	}
+	
+	
+	@PostMapping("completecarservice")
+	public String completecarservice(@RequestParam long serviceId, Model model, RedirectAttributes redirect,
+			@SessionAttribute Users loggedInUser) {
+		CarServices service = carServicesService.findByCarServicesId(serviceId).get();
+		if (service != null) {
+			service.setServiceFulfillmentDate(LocalDate.now().toString());
+			carServicesService.savecarServices(service);
+			redirect.addFlashAttribute("success", "Car Service completed");
+		} else {
+			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
+		}
+		return "redirect:/mycarServices";
+	}
+	
 
 	@PostMapping("sendemail")
 	public String sendemail(Model model, @RequestParam String email, @RequestParam String name,

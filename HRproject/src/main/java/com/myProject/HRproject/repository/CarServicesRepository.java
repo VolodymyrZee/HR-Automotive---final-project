@@ -12,6 +12,7 @@ import com.myProject.HRproject.model.Cars;
 
 
 public interface CarServicesRepository extends JpaRepository<CarServices, Long >{
+	
 	CarServices findByServiceDescription(String serviceDescription);
 	@Query("FROM CarServices WHERE serviceDescription=?1")
 	Optional<CarServices> findServiceDescription(String serviceDescription);
@@ -20,7 +21,7 @@ public interface CarServicesRepository extends JpaRepository<CarServices, Long >
 	List<CarServices> findByCarServicesId(long id);
 	
 	@Query("FROM CarServices WHERE  serviceCompleted=?1")
-	List<Cars> findByServiceCompleted(Boolean serviceCompleted);
+	List<CarServices> findByServiceCompleted(Boolean serviceCompleted);
 	
-	List<Cars> findAllByCarServices(Cars serviceCar);
+	List<CarServices> findAllByServiceCar(Cars serviceCar);
 }
