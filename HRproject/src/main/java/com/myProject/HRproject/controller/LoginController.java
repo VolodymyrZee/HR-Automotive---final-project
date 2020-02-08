@@ -14,6 +14,8 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.myProject.HRproject.service.CarService;
+import com.myProject.HRproject.service.CarServicesService;
 import com.myProject.HRproject.service.UserService;
 import com.myProject.HRproject.validaition.DataValidation;
 import com.myProject.HRproject.WebUtils;
@@ -33,13 +35,17 @@ public class LoginController {
 	private WebUtils webUtils;
 	
 	private UserService userService;
+	private CarServicesService carServicesService;
+	private CarService carService;
 	
 	@Autowired
-	public LoginController(UserService userService,
-			//UserRepository userRepository, 
+	public LoginController(UserService userService, CarService carService,
+			CarServicesService carServicesService,
 			DataValidation dataValidation, WebUtils webUtils) {
 		super();
 		//this.userRepository = userRepository;
+		this.carServicesService=carServicesService;
+		this.carService=carService;
 		this.dataValidation = dataValidation;
 		this.userService=userService;
 		this.webUtils=webUtils;
@@ -239,6 +245,9 @@ public class LoginController {
 		
 		try {
 			model.addAttribute("profiles",userService.findById(id).get());
+
+			
+			model.addAttribute("carServices", carServicesService.findAllByCarServicesByUser(userService.findById(id).get()));
 			webUtils.getFiles(model, id);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

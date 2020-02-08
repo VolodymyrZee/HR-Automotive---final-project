@@ -18,6 +18,7 @@
 
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
+    <link href="static1/css/styles.css" rel="stylesheet">
 <!--     <link href="static1/css/agency.css" rel="stylesheet">  -->
     
 </head>
@@ -35,19 +36,6 @@
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
 
-          <!-- <div class="hidden-top">
-                <div class="hidden-top-inner container">
-                  <div class="row">
-                    <div class="span12">
-                      <ul>
-                        <li color: "yellow";><strong>We are available for any custom works this month</strong></li>
-                        <li>Main office: Springville center X264, Park Ave S.01</li>
-                        <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -92,7 +80,7 @@
                         <a class="page-scroll" href="register">Sign Up</a>
                     </li> -->
                     <li>
-                        <a class="page-scroll" href="services">Services</a>
+                        <a class="page-scroll" href="services">Contact Us</a>
                     </li>
                    <!--  <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -103,9 +91,9 @@
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
-                    <li>
+                   <!--  <li>
                         <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -117,16 +105,21 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome to HR Automotive!</div>
-                <div class="intro-heading">How can we help?</div>
-               <!--  <a href="login" class="page-scroll btn btn-xl">Schedule Service</a> -->
+            <div class="intro-lead-in">Welcome to HR Automotive!</div>
+               <c:if test="${loggedInUser.role eq 'USER'}">
                 
+                <div class="intro-heading">How can we help?</div>
+                </c:if>
+               <!--  <a href="login" class="page-scroll btn btn-xl">Schedule Service</a> -->
+                 
                 <c:choose>
 			  <c:when test="${empty loggedInUser}">			  
               <a href="login" class="page-scroll btn btn-xl">Schedule Service</a>
               </c:when>
 			  <c:otherwise>
-			  <a href="services" class="page-scroll btn btn-xl">Schedule Service</a>
+			   <c:if test="${loggedInUser.role eq 'USER'}">
+			  <a href="mycars" class="page-scroll btn btn-xl">Schedule Service</a>
+			  </c:if>
 			  </c:otherwise>
 			  </c:choose>
                 
@@ -155,7 +148,7 @@
             </div> -->
 <section id="about">
         <div class="container">
-            <div class="row">
+            <div id="content">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
                    <div class="shop">
@@ -325,7 +318,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">We are open Mon-Fri 9am-5pm</h3>
                 </div>
             </div>
             <div class="row">
@@ -390,6 +383,22 @@
                 </div>
             </div>
         </div>
+          <div class="span3">
+            <div class="widget">
+              <h5 class="widgetheading">Contact Information</h5>
+              <address>
+				<strong>HR Automotive Services</strong>
+				<br>
+							 1635 Lotsie Blvd
+			     <br>
+								 St Louis, MO 63132
+					 		</address>
+              <p>
+                <i class="icon-phone"></i> (314) 426-2020  <br>
+                <i class="icon-envelope-alt"></i> hrautomotive27@gmail.com
+              </p>
+            </div>
+          </div>
     </footer>
 
 

@@ -172,7 +172,7 @@
 
 
 						<li><a class="page-scroll" href="index">HOME</a></li>
-						<li><a class="page-scroll" href="services">Services</a></li>
+						<li><a class="page-scroll" href="services">Contact Us</a></li>
 
 						<li><a class="page-scroll" href="about">About</a></li>
 						<!-- <li>
@@ -192,11 +192,18 @@
 								<li><a href="register" class="page-scroll">Sign Up</a></li>
 							</c:when>
 							<c:otherwise>
-
+                              <c:if test="${loggedInUser.role eq 'ADMIN'}"> 
+                              <li><a href="profile" class="page-scroll">My Profile</a></li>
+                              <li><a class="page-scroll" href="users">Users</a></li>
+                              <li><a href="logout" class="page-scroll">Logout</a></li>
+                              
+                              </c:if>
+                              <c:if test="${loggedInUser.role eq 'USER'}">
 								<li><a href="profile" class="page-scroll">My Profile</a></li>
 								<li><a href="mycars" class="page-scroll">My Cars</a></li>
-								<li><a class="page-scroll" href="users">Users</a></li>
+								
 								<li><a href="logout" class="page-scroll">Logout</a></li>
+								</c:if>
 							</c:otherwise>
 						</c:choose>
 

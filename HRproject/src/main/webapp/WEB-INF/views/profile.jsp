@@ -108,12 +108,26 @@
             </h4>
                 <p style="color: black" class="text-info"><h3>${msg} ${sucess}</h3></p>
                 <ul class="nav nav-tabs bold">
+                
+                 <c:if test="${loggedInUser.role eq 'USER'}">
                   <li class="active"><a href="#one" data-toggle="tab">
                   <i class="icon-info-sign"></i> Contact Info</a></li>
                   <li class=""><a href="#two" data-toggle="tab">
                   <i class="icon-pencil"></i>Update Profile</a></li>
-                  <li class=""><a href="#three" data-toggle="tab">
+                 <li class=""><a href="#three" data-toggle="tab">
                   <i class="icon-pen"></i>Add Car</a></li>
+                 
+                 </c:if>
+                 
+                 <c:if test="${loggedInUser.role eq 'ADMIN'}">
+                  <li class="active"><a href="#one" data-toggle="tab">
+                  <i class="icon-info-sign"></i> Contact Info</a></li>
+                  <li class=""><a href="#two" data-toggle="tab">
+                  <i class="icon-pencil"></i>Update Profile</a></li>
+                 
+                 </c:if>
+                  
+                  
                   
                 </ul>
                 <div class="tab-content">

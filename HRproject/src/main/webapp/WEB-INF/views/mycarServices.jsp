@@ -101,10 +101,11 @@ img {
 											<th>#</th>
 											<th>Service Description</th>
 											<th>Service Request Date</th>
+											<th>Status</th>
 
-											<%-- <c:if test="${loggedInUser.role eq 'ADMIN'}">  </c:if>    --%>
-											<th>Is Service completed</th>
-
+											<c:if test="${loggedInUser.role eq 'ADMIN'}"> 
+												<th>Action</th>
+											</c:if>   
 
 
 										</tr>
@@ -117,8 +118,18 @@ img {
 
 												<td>${item.serviceDescription}</td>
 												<td>${item.serviceRequestDate}</td>
-												<td>${item.serviceCompleted}</td>
-
+												<td>${item.serviceCompleted == true? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</td>
+												<c:if test="${loggedInUser.role eq 'ADMIN'}"> 
+													<td>
+														<c:if test="${item.serviceCompleted == false}">
+															<form action="completecarservice" method="post">
+																<input type="hidden" name="serviceId" value="${item.id}" />
+																<button type="submit" class="btn btn-info" >Complete</button>
+															</form>
+														</c:if>
+														
+													</td>
+												</c:if>
 
 
 											</tr>
@@ -130,6 +141,7 @@ img {
 
 						</div>
 						<!-- divider -->
+						<c:if test="${loggedInUser.role eq 'USER'}"> 
 						<div class="row">
 							<div class="span12">
 								<div class="solidline"></div>
@@ -150,6 +162,12 @@ img {
 											<select  name="serviceDescription">
 												<option>Oil Change</option>
 												<option>Tire rotation</option>
+												<option>Diagnostics</option>
+												<option>Battery Replacement</option>
+												<option>Transmission Service</option>
+												<option>Cooling system service</option>
+												<option>Brake Service</option>
+												<option>Other</option>
 											</select>
 										</div>
 									</div>
@@ -167,14 +185,14 @@ img {
 									</div>
 
 
-									<div class="control-group ${hidden}">
+									<%-- <div class="control-group ${hidden}">
 										<label class="control-label" for="serviceCompleted">Is
 											Service Completed</label>
 										<div class="controls">
 											<input type="checkbox" name="serviceCompleted" />
 										</div>
 									</div>
-
+ --%>
 
 
 
@@ -191,6 +209,7 @@ img {
 
 							</div>
 						</div>
+						</c:if>
 						<!-- end divider -->
 
 

@@ -35,6 +35,7 @@
 
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
+     <link href="static/css/flexslider.css" rel="stylesheet">
   
 </head>
 
@@ -151,8 +152,8 @@
                   
                   <div class="control-group">
                     <div class="controls">
-                      <button type="submit" id="submit" class="btn btn-danger">Submit</button>
-                      <a href="login" class="btn btn-success">Cancel</a>
+                      <button type="submit" id="submit" class="btn black">Submit</button>
+                      <a href="login" class="btn yellow">Cancel</a>
                     
                     </div>
                     
@@ -163,24 +164,10 @@
 
                     </div>
                 </form:form>
-                <img class="img-centered" src="static1/img/HRpics/6.jpg" class="img-responsive " alt="">
+                <img class="img-centered" src="static1/img/HRpics/5.jpg" class="img-responsive " alt="">
           </div>
           <div class="span6">
-            <!-- start flexslider -->
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                  <img src="static1/img/works/full/image-01-full.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="static1/img/works/full/image-02-full.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="static1/img/works/full/image-03-full.jpg" alt="" />
-                </li>
-              </ul>
-            </div>
-            <!-- end flexslider -->
+           
           </div>
         </div>
         <!-- divider -->
@@ -196,7 +183,7 @@
     </section>
    <jsp:include page="footer.jsp"/> 
   </div>
-  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
+  <!-- <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a> -->
   
   <script src="static/vendor/jquery/jquery.min.js"></script>
 

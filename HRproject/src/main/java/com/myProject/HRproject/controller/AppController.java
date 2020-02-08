@@ -104,6 +104,8 @@ public class AppController {
 			carService.setServiceDescription(serviceDescription);
 			carService.setServiceRequestDate(serviceRequestDate);
 			carServicesService.savecarServices(carService);
+			webUtils.sendMail("hrautomotiveservicesinc@gmail.com", loggedInUser.getFname()+" "+loggedInUser.getLname()+" scheduled the "+carService.getServiceDescription()+" for a "+car.getYear()+" "+car.getMake()+" "+car.getModel()+" on "+carService.getServiceRequestDate(), "Service scheduled");
+			
 			redirect.addFlashAttribute("success", "Car service added");
 		} else {
 			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
@@ -119,13 +121,33 @@ public class AppController {
 		CarServices service = carServicesService.findByCarServicesId(serviceId).get();
 		if (service != null) {
 			service.setServiceFulfillmentDate(LocalDate.now().toString());
+			service.setServiceCompleted(true);
 			carServicesService.savecarServices(service);
+			webUtils.sendMail(service.getServiceCar().getCarUser().getEmail(), "The "+service.getServiceDescription()+" on the "+service.getServiceCar().getMake()+" "+service.getServiceCar().getModel() + " was completed. You can now pick up your vehicle. We are open Mon-Fri, 9am-5pm. Thank You for Your Business! Best Regards. HR Automotive Services.", "Service completed");
 			redirect.addFlashAttribute("success", "Car Service completed");
 		} else {
 			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
 		}
-		return "redirect:/mycarServices";
+		return "redirect:/mycarServices?carId="+service.getServiceCar().getId();
 	}
+	
+//	
+//	@PostMapping("deletecarservice")
+//	public String deletevarservice(@RequestParam long serviceId, Model model, RedirectAttributes redirect,
+//			@SessionAttribute Users loggedInUser) {
+//		CarServices service = carServicesService.deletecarServices(serviceId).get();
+//		if (service != null) {
+//			service.setServiceFulfillmentDate(LocalDate.now().toString());
+//			service.setServiceCompleted(true);
+//			carServicesService.savecarServices(service);
+//			
+//			redirect.addFlashAttribute("success", "Car Service completed");
+//		} else {
+//			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
+//		}
+//		return "redirect:/mycarServices?carId="+service.getServiceCar().getId();
+//	}
+	
 	
 
 	@PostMapping("sendemail")
@@ -133,7 +155,7 @@ public class AppController {
 			@RequestParam String subject, @RequestParam String message) {
 
 		try {
-			webUtils.sendMail("kennjuma16@gmail.com", message + " From " + name, subject);
+			webUtils.sendMail("hrautomotiveservicesinc@gmail.com", message + " From " + name, subject);
 			model.addAttribute("msg", "email sent");
 		} catch (Exception e) {
 			model.addAttribute("msg", e);

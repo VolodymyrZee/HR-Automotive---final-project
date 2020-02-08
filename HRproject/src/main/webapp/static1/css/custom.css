@@ -16,3 +16,10 @@
 .shop p {
   margin-top: 0;
 }
+
+.btn yellow {
+	color: yellow;
+}
+.btn black {
+	color:black;
+}
