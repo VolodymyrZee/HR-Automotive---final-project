@@ -89,23 +89,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="span4">
-						<div class="inner-heading">
+						<div class="">
 							<h2>Profile</h2>
 						</div>
 					</div>
-					<div class="span8">
+					<div class="span18">
 						<ul class="breadcrumb">
-							<li class="nav-item text-left">
+							<li class="">
 								<form class="form-search" action="search" method="post">
 									<input name="name" placeholder="Type something" type="text"
 										class="input-medium search-query">
-									<button type="submit" class="btn btn-square btn-theme">Search</button>
+									<button type="submit" class="btn ">Search</button>
 								</form>
 							</li>
-							<li><a href="#"><i class="icon-home"></i></a><i
-								class="icon-angle-right"></i></li>
-							<li><a href="index">Home</a><i class="icon-angle-right"></i></li>
-							<li class="active">Profile</li>
+							
 						</ul>
 					</div>
 				</div>
@@ -166,7 +163,7 @@
 
 
 
-							<div class="tab-pane active" id="one">
+							<div class="" id="one">
 								<section id="content">
 									<div class="container">
 										<!-- Default table -->
@@ -195,18 +192,18 @@
 															<tr>
 
 																<td>
-																	${item.serviceCar.make} <br/> ${item.serviceCar.model} ${item.serviceCar.year}
+																	<strong>${item.serviceCar.make} <br/> ${item.serviceCar.model} ${item.serviceCar.year}</strong>
 																</td>
 
-																<td>${item.serviceDescription}</td>
-																<td>${item.serviceRequestDate}</td>
-																<td>${item.serviceCompleted == true? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</td>
+																<td><strong>${item.serviceDescription}</strong></td>
+																<td><strong>${item.serviceRequestDate}</strong></td>
+																<td><strong>${item.serviceCompleted == true? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</strong></td>
 																<c:if test="${loggedInUser.role eq 'ADMIN'}">
 																	<td><c:if test="${item.serviceCompleted == false}">
 																			<form action="completecarservice" method="post">
 																				<input type="hidden" name="serviceId"
 																					value="${item.id}" />
-																				<button type="submit" class="btn btn-info">Complete</button>
+																				<button type="submit" class="btn btn-warning">Complete</button>
 																			</form>
 																		</c:if></td>
 																</c:if>
@@ -237,8 +234,6 @@
 
 
 
-	<a href="#" class="scrollup"><i
-		class="icon-chevron-up icon-square icon-32 active"></i></a>
 
 	<script src="static/vendor/jquery/jquery.min.js"></script>
 

@@ -131,22 +131,22 @@ public class AppController {
 		return "redirect:/mycarServices?carId="+service.getServiceCar().getId();
 	}
 	
-//	
-//	@PostMapping("deletecarservice")
-//	public String deletevarservice(@RequestParam long serviceId, Model model, RedirectAttributes redirect,
-//			@SessionAttribute Users loggedInUser) {
-//		CarServices service = carServicesService.deletecarServices(serviceId).get();
-//		if (service != null) {
-//			service.setServiceFulfillmentDate(LocalDate.now().toString());
-//			service.setServiceCompleted(true);
-//			carServicesService.savecarServices(service);
-//			
-//			redirect.addFlashAttribute("success", "Car Service completed");
-//		} else {
-//			redirect.addFlashAttribute("error", "failed to add a car due to invalid user");
-//		}
-//		return "redirect:/mycarServices?carId="+service.getServiceCar().getId();
-//	}
+	
+	@PostMapping("deletecarservice")
+	public String deletecarservice(@RequestParam  long servicesId, Model model, RedirectAttributes redirect,
+			@SessionAttribute Users loggedInUser) {
+		
+		
+		CarServices service = carServicesService.findByCarServicesId(servicesId).get();
+		if (service != null) {
+			carServicesService.deletecarService(service.getId());
+			
+			redirect.addFlashAttribute("success", "Car Service deleted");
+		}else {
+			redirect.addFlashAttribute("error", "failed to delete service");
+		}
+		return "redirect:/mycarServices?carId="+service.getServiceCar().getId();
+	}
 	
 	
 

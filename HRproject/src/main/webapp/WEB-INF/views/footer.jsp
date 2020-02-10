@@ -5,12 +5,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Zebra Dynamics 2020</span>
+                   
                 </div>
                
-               <div class="span3">
+               <div class="col-md-4">
+               <span class="copyright">Copyright &copy; Zebra Dynamics 2020</span>
             <div class="widget">
               <h5 class="widgetheading">Contact Information</h5>
+              
               <address>
 				<strong>HR Automotive Services</strong>
 				<br>

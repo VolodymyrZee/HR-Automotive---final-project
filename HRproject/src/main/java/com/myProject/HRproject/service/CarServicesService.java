@@ -11,7 +11,7 @@ import com.myProject.HRproject.model.Users;
 public interface CarServicesService {
 
 	Optional<CarServices> findByCarServicesId(long id);
-	void deletecarServices(long id);
+	void deletecarService(long id);
 	void savecarServices(CarServices carServices);
 	void updatecarServices(CarServices carServices);
 	List<CarServices> findAll();

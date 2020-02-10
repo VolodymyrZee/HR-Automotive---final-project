@@ -71,16 +71,16 @@
       <div class="container">
         <div class="row">
           <div class="span4">
-            <div class="inner-heading">
+            <div class="">
               <h2>Users</h2>
             </div>
           </div>
-          <div class="span8">
+          <div class="span18">
             <ul class="breadcrumb">
-              <li class="nav-item text-left">
+              <li class="">
 			    <form class="form-search" action="search" method="post">
-                  <input name="name" placeholder="Type something" type="text" class="input-medium search-query">
-                  <button type="submit" class="btn btn-square btn-theme">Search</button>
+                  <input name="name" placeholder="Type something" type="text" class="">
+                  <button type="submit" class="btn ">Search</button>
                 </form>
 			  </li>
          
@@ -103,11 +103,9 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Image</th>
+                  
                   <th>
-                  <input type="text" id="searchnow" 
-		             placeholder=" Filter Names (${users.size()}) " 
-		             class="form-control"  >
+                 
 		          </th>
                   <th>Email</th>
                   <th>Phone</th>
@@ -123,22 +121,10 @@
                   <td>
                     ${users.indexOf(item)+1}.
                   </td>            
+                 
                   <td>
-                  <div class="text-center">
-                    <c:if test="${not empty item.image}">
-                    <a href="userprofile?id=${item.id}">
-                    <img src="static/img/users/${item.id}/profile/${item.image}" 
-				    alt="Profile Image" style="height:50px; width: auto;"><br>
-                    </a>
-                    </c:if>
-                    <c:if test="${empty item.image}">
-                    No Image
-                    </c:if>
-                 </div>
-                  </td>
-                  <td>
-                  <a href="userprofile?id=${item.id}" class="btn btn-link">${item.fname} ${item.lname}
-                  </a>
+                 <strong> <a href="userprofile?id=${item.id}" style="color: black ">${item.fname} ${item.lname}  </a></strong>
+                 
                   </td>
                   <td>
                       ${item.email}
@@ -188,7 +174,7 @@
   
    <jsp:include page="footer.jsp"/> 
   
-  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
+  
   
   <!-- <script src="static/vendor/jquery/jquery.min.js"></script>
 

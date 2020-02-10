@@ -31,7 +31,7 @@ public class CarServicesServiceImpl  implements CarServicesService{
 	}
 
 	@Override
-	public void deletecarServices(long id) {
+	public void deletecarService(long id) {
 		
 		carServicesRepository.deleteById(id);
 	}

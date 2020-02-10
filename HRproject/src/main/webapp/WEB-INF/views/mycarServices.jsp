@@ -85,7 +85,7 @@ img {
 				<div class="row">
 					<div class="span2"></div>
 					<div class="span4">
-						<h3>${car.make} - ${car.model} ${car.year}</h3>
+						<h3>${car.make}- ${car.model} ${car.year}</h3>
 					</div>
 				</div>
 				<section id="content">
@@ -103,10 +103,11 @@ img {
 											<th>Service Request Date</th>
 											<th>Status</th>
 
-											<c:if test="${loggedInUser.role eq 'ADMIN'}"> 
+											<c:if test="${loggedInUser.role eq 'ADMIN'}">
 												<th>Action</th>
-											</c:if>   
 
+											</c:if>
+											<th>Delete</th>
 
 										</tr>
 									</thead>
@@ -118,19 +119,25 @@ img {
 
 												<td>${item.serviceDescription}</td>
 												<td>${item.serviceRequestDate}</td>
-												<td>${item.serviceCompleted == true? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</td>
-												<c:if test="${loggedInUser.role eq 'ADMIN'}"> 
-													<td>
-														<c:if test="${item.serviceCompleted == false}">
+												<td>${item.serviceCompleted == true ? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</td>
+												<c:if test="${loggedInUser.role eq 'ADMIN'}">
+													<td><c:if test="${item.serviceCompleted == false}">
 															<form action="completecarservice" method="post">
 																<input type="hidden" name="serviceId" value="${item.id}" />
-																<button type="submit" class="btn btn-info" >Complete</button>
+																<button type="submit" class="btn btn-info">Complete</button>
 															</form>
-														</c:if>
-														
-													</td>
-												</c:if>
+														</c:if></td>
 
+												</c:if>
+												
+												<form action="deletecarservice" method="post">
+													<input type="hidden" name="servicesId" value="${item.id }"/>
+													<button type="submit" class="btn btn-info">Delete</button>
+												</form> 
+												 <%-- <td><a href="deletecarservice?id=${item.id}"
+													style="color: red" onclick="confirmed(); return false;">
+														<i class="icon-trash"></i>
+												</a></td>  --%>
 
 											</tr>
 										</c:forEach>
@@ -141,51 +148,52 @@ img {
 
 						</div>
 						<!-- divider -->
-						<c:if test="${loggedInUser.role eq 'USER'}"> 
-						<div class="row">
-							<div class="span12">
-								<div class="solidline"></div>
+						<c:if test="${loggedInUser.role eq 'USER'}">
+							<div class="row">
+								<div class="span12">
+									<div class="solidline"></div>
 
-								<!------------------------------------- add service ---------------------------------------- -->
+									<!------------------------------------- add service ---------------------------------------- -->
 
-								<form action="addcarservice" method="post" class="form-horizontal">
-									<input type="hidden" value="${car.id}" name="carId" />
-									<h3 class="text-center">
-										<span class="text-success"> ${success}</span>
-									</h3>
+									<form action="addcarservice" method="post"
+										class="form-horizontal">
+										<input type="hidden" value="${car.id}" name="carId" />
+										<h3 class="text-center">
+											<span class="text-success"> ${success}</span>
+										</h3>
 
 
-									<div class="control-group ${hidden}">
-										<label class="control-label" for="serviceDescription">Service
-											Description</label>
-										<div class="controls">
-											<select  name="serviceDescription">
-												<option>Oil Change</option>
-												<option>Tire rotation</option>
-												<option>Diagnostics</option>
-												<option>Battery Replacement</option>
-												<option>Transmission Service</option>
-												<option>Cooling system service</option>
-												<option>Brake Service</option>
-												<option>Other</option>
-											</select>
+										<div class="control-group ${hidden}">
+											<label class="control-label" for="serviceDescription">Service
+												Description</label>
+											<div class="controls">
+												<select name="serviceDescription">
+													<option>Oil Change</option>
+													<option>Tire rotation</option>
+													<option>Diagnostics</option>
+													<option>Battery Replacement</option>
+													<option>Transmission Service</option>
+													<option>Cooling system service</option>
+													<option>Brake Service</option>
+													<option>Other</option>
+												</select>
+											</div>
 										</div>
-									</div>
 
 
 
 
 
-									<div class="control-group ${hidden}">
-										<label class="control-label" for="serviceRequestDate">Request
-											Date</label>
-										<div class="controls">
-											<input type="date" name="serviceRequestDate" />
+										<div class="control-group ${hidden}">
+											<label class="control-label" for="serviceRequestDate">Request
+												Date</label>
+											<div class="controls">
+												<input type="date" name="serviceRequestDate" />
+											</div>
 										</div>
-									</div>
 
 
-									<%-- <div class="control-group ${hidden}">
+										<%-- <div class="control-group ${hidden}">
 										<label class="control-label" for="serviceCompleted">Is
 											Service Completed</label>
 										<div class="controls">
@@ -196,19 +204,19 @@ img {
 
 
 
-									<div class="control-group">
-										<div class="controls">
-											<button type="submit" id="submit" class="btn btn-danger">Submit</button>
-											<a href="profile" class="btn btn-success">Cancel</a>
+										<div class="control-group">
+											<div class="controls">
+												<button type="submit" id="submit" class="btn btn-danger">Submit</button>
+												<a href="profile" class="btn btn-success">Cancel</a>
+
+											</div>
 
 										</div>
 
-									</div>
+									</form>
 
-								</form>
-
+								</div>
 							</div>
-						</div>
 						</c:if>
 						<!-- end divider -->
 

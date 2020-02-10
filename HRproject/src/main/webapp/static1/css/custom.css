@@ -1,15 +1,15 @@
 .shop {
   text-align: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .shop img {
-   height: 780px;
-  width: 1120px; 
+  width: 550px; 
   margin: 0 auto;
-  border: 7px solid white;
+  padding-bottom: 20px;
 }
 .shop h4 {
-  margin-top: 25px;
   margin-bottom: 0;
   text-transform: none;
 }
@@ -23,3 +23,11 @@
 .btn black {
 	color:black;
 }
+
+.floatLeft {
+	margin: auto;
+}
+.floatRight {
+	width:1000px;
+}
+

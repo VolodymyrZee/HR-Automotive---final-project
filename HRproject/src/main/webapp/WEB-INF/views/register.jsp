@@ -70,23 +70,22 @@
             
     <section id="content">
       <div class="container">
-        <div class="row">
-          <div class="span6">
+        <div class="">
+          <div class="floatLeft">
            <h3 class="text-center">${msg} 
            
            </h3> 
            
            
            
-           
-			<form:form action="${action}" modelAttribute="users" method="post" class="form-horizontal">
+			<form:form action="${action}" modelAttribute="users" method="post">
                   <h3 class="text-center">
                   <span class="text-success"> ${success}</span>
                   <span class="text-error text-center">${error}</span>
                   </h3>
-                  <div class="control-group ${hidden}">
-                    <label class="control-label" for="inputText">Email*</label>
-                    <div class="controls">
+                  <div ${hidden}">
+                    <label  for="inputText">Email*</label>
+                    <div >
                       <form:input type="hidden" path="id"/>
                       <form:input type="email" path="email" placeholder="Email"/>
                     <div class="has-error">
@@ -95,9 +94,9 @@
                     </div>
                     
                   </div>
-                  <div class="control-group ${hidden}">
-                    <label class="control-label" for="password">Password*</label>
-                    <div class="controls">
+                  <div ${hidden}">
+                    <label  for="password">Password*</label>
+                    <div >
                      <form:input type="password" path="password" placeholder="Password" /> 
                     <div class="has-error">
 					  <form:errors path="password" class="text-error"/>
@@ -106,9 +105,9 @@
                     
                   </div>
                   
-                  <div class="control-group" ${hidden}>
-                    <label class="control-label" for="repeatpassword">Re-enter Password*</label>
-                    <div class="controls">
+                  <div ${hidden}>
+                    <label  for="repeatpassword">Re-enter Password*</label>
+                    <div >
                      <form:input type="password" path="repeatpassword" placeholder="repeatpassword" /> 
                     <div class="has-error">
 					  <form:errors path="repeatpassword" class="text-error"/>
@@ -117,9 +116,9 @@
                     
                   </div>
                   
-                  <div class="control-group">
-                    <label class="control-label" for="fname">First Name*</label>
-                    <div class="controls">
+                  <div>
+                    <label  for="fname">First Name*</label>
+                    <div >
                      <form:input path="fname" placeholder="First Name" /> 
                     <div class="has-error">
 					  <form:errors path="fname" class="text-error"/>
@@ -128,9 +127,9 @@
                     
                   </div>
                   
-                  <div class="control-group">
-                    <label class="control-label" for="lname">Last Name*</label>
-                    <div class="controls">
+                  <div >
+                    <label  for="lname">Last Name*</label>
+                    <div >
                      <form:input path="lname" placeholder="Last Name" /> 
                     <div class="has-error">
 					  <form:errors path="lname" class="text-error"/>
@@ -139,9 +138,9 @@
                     
                   </div>
                   
-                  <div class="control-group">
-                    <label class="control-label" for="phone">Phone*</label>
-                    <div class="controls">
+                  <div >
+                    <label  for="phone">Phone*</label>
+                    <div >
                      <form:input path="phone" placeholder="Phone" /> 
                     <div class="has-error">
 					  <form:errors path="phone" class="text-error"/>
@@ -150,21 +149,18 @@
                     
                   </div>
                   
-                  <div class="control-group">
-                    <div class="controls">
+                  <div >
+                    <div >
                       <button type="submit" id="submit" class="btn black">Submit</button>
                       <a href="login" class="btn yellow">Cancel</a>
                     
                     </div>
                     
                   </div>
-                  <div class="shop">
-                        
-                      
-
-                    </div>
+                 
                 </form:form>
-                <img class="img-centered" src="static1/img/HRpics/5.jpg" class="img-responsive " alt="">
+                <img class="floatRight" src="static1/img/HRpics/5.jpg" class="img-responsive " alt="">
+                
           </div>
           <div class="span6">
            

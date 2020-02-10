@@ -10,7 +10,7 @@
   <link href="static1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="static1/css/custom.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static1/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -18,8 +18,9 @@
 
     <!-- Theme CSS -->
     <link href="static1/css/agency.min.css" rel="stylesheet">
-    <link href="static1/css/styles.css" rel="stylesheet">
-<!--     <link href="static1/css/agency.css" rel="stylesheet">  -->
+    <!-- <link href="static1/css/styles.css" rel="stylesheet"> -->
+     <link href="static1/css/agency.css" rel="stylesheet"> 
+     
     
 </head>
 <body>
@@ -126,57 +127,31 @@
             </div>
         </div>
     </header>
-
+<div class="blackPadding"></div>
     
     <!-- About Section -->
     
     
-                   
-   
-<!-- <div class="shop">
-              <ul class="shop">
-                <li>
-                  <img src="static1/img/HRpics/1.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="static1/img/HRpics/2.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="static1/img/HRpics/3.jpg" alt="" />
-                </li>
-              </ul>
-            </div> -->
+
 <section id="about">
         <div class="container">
             <div id="content">
-                <div class="col-lg-12 text-center">
+                <div class="text-center">
                     <h2 class="section-heading">About</h2>
-                   <div class="shop">
+                    
+                   <span class="shop">
                         <img src="static1/img/HRpics/7.jpg" class="img-responsive " alt="">
-                      
-
-                    </div>
-                    
-                    <div class="shop">
                         <img src="static1/img/HRpics/2.jpg" class="img-responsive " alt="">
-                        <h4>Our Shop</h4>
-                        <p class="text-muted">State of art facility</p>
-
-                    </div>
-                    
-                    <div class="shop">
+                        <!-- <h4>Our Shop</h4> -->
+                        <!-- <p class="text-muted">State of art facility</p> -->
                         <img src="static1/img/HRpics/4.jpg" class="img-responsive " alt="">
                         
-                        <p class="text-muted">Professional tools</p>
-
-                    </div>
-                    
-                    <div class="shop">
+                        <!-- <p class="text-muted">Professional tools</p> -->
                         <img src="static1/img/HRpics/8.jpg" class="img-responsive " alt="">
                         
                    
 
-                    </div>
+                    </span>
                 </div>
             </div>
             <div class="row">
@@ -323,84 +298,31 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form action="dropaline" method="post" role="form"
+									class="contactForm">
+									<div class="row">
+										<input type="hidden" name="from" value="${loggedInUser.email}" />
+										<input type="hidden" name="to" value="hrautomotiveservicesinc@gmail.com">
+										<input type="hidden" name="fromname"
+											value="${loggedInUser.fname}">
+										<div class="span8 margintop10 form-group">
+											<textarea class="form-control" name="message" rows="7"
+												data-rule="required"
+												data-msg="Please write something for me"
+												placeholder="Message"></textarea>
+											<p class="text-left">
+												<button class="btn btn-large btn-theme margintop10"
+													type="submit">Send message</button>
+											</p>
+										</div>
+									</div>
+								</form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Zebra Dynamics 2020</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Contact Information</h5>
-              <address>
-				<strong>HR Automotive Services</strong>
-				<br>
-							 1635 Lotsie Blvd
-			     <br>
-								 St Louis, MO 63132
-					 		</address>
-              <p>
-                <i class="icon-phone"></i> (314) 426-2020  <br>
-                <i class="icon-envelope-alt"></i> hrautomotive27@gmail.com
-              </p>
-            </div>
-          </div>
-    </footer>
-
+    <jsp:include page="footer.jsp"/> 
 
 
     

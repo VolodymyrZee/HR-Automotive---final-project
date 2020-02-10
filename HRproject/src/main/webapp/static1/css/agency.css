@@ -230,10 +230,10 @@ header {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: 100vw 100vh;
+  -moz-background-size: 100vw 100vh;
+  background-size: 100vw 100vh;
+  -o-background-size: 100vw 100vh;
   text-align: center;
   color: white;
 }
@@ -254,7 +254,7 @@ header .intro-text .intro-heading {
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 1px;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -277,6 +277,12 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
+
+.blackPadding {
+	padding-bottom: 260px;
+	background: black;
+}
+
 section {
   padding: 100px 0;
 }
@@ -295,7 +301,7 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 10px 0;
   }
 }
 .service-heading {
@@ -616,7 +622,7 @@ section#contact .text-danger {
   color: #e74c3c;
 }
 footer {
-  padding: 25px 0;
+  padding: 0px 0;
   text-align: center;
 }
 footer span.copyright {

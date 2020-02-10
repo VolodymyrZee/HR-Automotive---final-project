@@ -174,7 +174,7 @@
 						<li><a class="page-scroll" href="index">HOME</a></li>
 						<li><a class="page-scroll" href="services">Contact Us</a></li>
 
-						<li><a class="page-scroll" href="about">About</a></li>
+						<li><a class="page-scroll" href="index#about">About</a></li>
 						<!-- <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li> -->
