@@ -21,7 +21,7 @@ public class CarServices {
 	private String serviceFulfillmentDate;
 	private boolean serviceCompleted;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="car_id", referencedColumnName = "id")
 	private Cars serviceCar;
 

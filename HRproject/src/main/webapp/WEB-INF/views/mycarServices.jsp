@@ -65,8 +65,8 @@ img {
 			<div class="container">
 				<div class="row">
 					<div class="span4">
-						<div class="inner-heading">
-							<h2>Profile</h2>
+						<div class="">
+							<h2>My Cars</h2>
 						</div>
 					</div>
 					<c:if test="${loggedInUser.role eq 'ADMIN'}">
@@ -85,7 +85,7 @@ img {
 				<div class="row">
 					<div class="span2"></div>
 					<div class="span4">
-						<h3>${car.make}- ${car.model} ${car.year}</h3>
+						<h3>${car.make}-${car.model}${car.year}</h3>
 					</div>
 				</div>
 				<section id="content">
@@ -129,12 +129,13 @@ img {
 														</c:if></td>
 
 												</c:if>
-												
+                                              <td>
 												<form action="deletecarservice" method="post">
-													<input type="hidden" name="servicesId" value="${item.id }"/>
+													<input type="hidden" name="servicesId" value="${item.id }" />
 													<button type="submit" class="btn btn-info">Delete</button>
-												</form> 
-												 <%-- <td><a href="deletecarservice?id=${item.id}"
+												</form>
+												</td>
+												<%-- <td><a href="deletecarservice?id=${item.id}"
 													style="color: red" onclick="confirmed(); return false;">
 														<i class="icon-trash"></i>
 												</a></td>  --%>
@@ -193,21 +194,13 @@ img {
 										</div>
 
 
-										<%-- <div class="control-group ${hidden}">
-										<label class="control-label" for="serviceCompleted">Is
-											Service Completed</label>
-										<div class="controls">
-											<input type="checkbox" name="serviceCompleted" />
-										</div>
-									</div>
- --%>
 
 
 
 										<div class="control-group">
 											<div class="controls">
-												<button type="submit" id="submit" class="btn btn-danger">Submit</button>
-												<a href="profile" class="btn btn-success">Cancel</a>
+												<button type="submit" id="submit" class="btn">Submit</button>
+												<a href="profile" class="btn">Cancel</a>
 
 											</div>
 
@@ -218,7 +211,7 @@ img {
 								</div>
 							</div>
 						</c:if>
-						<!-- end divider -->
+
 
 
 					</div>
@@ -233,8 +226,7 @@ img {
 
 
 
-	<a href="#" class="scrollup"><i
-		class="icon-chevron-up icon-square icon-32 active"></i></a>
+
 	<!-- javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

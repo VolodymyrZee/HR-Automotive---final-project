@@ -81,7 +81,7 @@
                         <a class="page-scroll" href="register">Sign Up</a>
                     </li> -->
                     <li>
-                        <a class="page-scroll" href="services">Contact Us</a>
+                        <a class="page-scroll" href="services">Directions</a>
                     </li>
                    <!--  <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>

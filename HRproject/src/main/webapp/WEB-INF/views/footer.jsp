@@ -22,7 +22,7 @@
 					 		</address>
               <p>
                 <i class="icon-phone"></i> (314) 426-2020  <br>
-                <i class="icon-envelope-alt"></i> hrautomotive27@gmail.com
+                <i class="icon-envelope-alt"></i> hrautomotiveservicesinc@gmail.com
               </p>
             </div>
           </div>

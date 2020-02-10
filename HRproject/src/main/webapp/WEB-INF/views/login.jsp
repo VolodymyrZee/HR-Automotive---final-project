@@ -72,7 +72,7 @@
                   
                   <div class="control-group">
                     <div class="controls">
-                      <button type="submit" id="submiter" class="btn">Sign in</button>  <br><br> <p>If you don't have an account, please sign up below.</p>  <button type="submit"><a href="register" >Sign Up</a></button>
+                      <button type="submit" id="submiter" class="btn">Sign in</button>  <br><br> <p><strong>If you don't have an account, please sign up below.</strong></p>  <button class="btn" id="submiter" type="submit"><a href="register" >Sign Up</a></button>
                     </div>
                     <p class="aligncenter margintop20">
                       Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>

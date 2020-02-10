@@ -172,7 +172,7 @@
 
 
 						<li><a class="page-scroll" href="index">HOME</a></li>
-						<li><a class="page-scroll" href="services">Contact Us</a></li>
+						<li><a class="page-scroll" href="services">Directions</a></li>
 
 						<li><a class="page-scroll" href="index#about">About</a></li>
 						<!-- <li>

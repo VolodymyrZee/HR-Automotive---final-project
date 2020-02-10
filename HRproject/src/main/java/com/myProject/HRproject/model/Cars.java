@@ -32,7 +32,7 @@ public class Cars {
 	
 
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="user_id", referencedColumnName = "id")
 	private Users carUser;
 	

@@ -138,7 +138,7 @@ img {
                   </td>
                  <td>
                  <li class="">
-                 	<a href="mycarServices?carId=${item.id}" >Service Car</a>
+                 	<Strong><a href="mycarServices?carId=${item.id}" >Service Car</a></Strong>
                   </li>
                  </td>
                 </tr>
@@ -179,8 +179,7 @@ img {
 
 	
 
-	<a href="#" class="scrollup"><i
-		class="icon-chevron-up icon-square icon-32 active"></i></a>
+	
 	<!-- javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

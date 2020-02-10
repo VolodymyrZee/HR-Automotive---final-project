@@ -57,7 +57,7 @@ public class AppController {
 
 	@GetMapping("services")
 	public String service(Model model) {
-		model.addAttribute("msg", "Get in touch with us by filling");
+		model.addAttribute("msg", " Get in touch with us by filling");
 		return "services";
 	}
 	
