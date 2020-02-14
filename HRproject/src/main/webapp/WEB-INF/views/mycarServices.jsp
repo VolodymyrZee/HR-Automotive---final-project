@@ -18,7 +18,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Profile</title>
+<title>My Car Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="" />
@@ -66,7 +66,7 @@ img {
 				<div class="row">
 					<div class="span4">
 						<div class="">
-							<h2>My Cars</h2>
+							<h2><i class="glyphicon glyphicon-wrench"></i>Services</h2>
 						</div>
 					</div>
 					<c:if test="${loggedInUser.role eq 'ADMIN'}">
@@ -115,16 +115,16 @@ img {
 										<c:forEach var="item" items="${carServices}">
 											<tr>
 
-												<td>${carservice.indexOf(item)+1}.</td>
+												<td><strong>${carservice.indexOf(item)+1}.</strong></td>
 
-												<td>${item.serviceDescription}</td>
-												<td>${item.serviceRequestDate}</td>
-												<td>${item.serviceCompleted == true ? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</td>
+												<td><strong>${item.serviceDescription}</strong></td>
+												<td><strong>${item.serviceRequestDate}</strong></td>
+												<td><strong>${item.serviceCompleted == true ? "Completed on ".concat(item.serviceFulfillmentDate) : "Not Completed" }</strong></td>
 												<c:if test="${loggedInUser.role eq 'ADMIN'}">
 													<td><c:if test="${item.serviceCompleted == false}">
 															<form action="completecarservice" method="post">
 																<input type="hidden" name="serviceId" value="${item.id}" />
-																<button type="submit" class="btn btn-info">Complete</button>
+																<button type="submit" class="btn btn-warning">Complete</button>
 															</form>
 														</c:if></td>
 
@@ -132,7 +132,7 @@ img {
                                               <td>
 												<form action="deletecarservice" method="post">
 													<input type="hidden" name="servicesId" value="${item.id }" />
-													<button type="submit" class="btn btn-info">Delete</button>
+													<button type="submit" class="btn btn-dark">Delete</button>
 												</form>
 												</td>
 												<%-- <td><a href="deletecarservice?id=${item.id}"
@@ -160,7 +160,7 @@ img {
 										class="form-horizontal">
 										<input type="hidden" value="${car.id}" name="carId" />
 										<h3 class="text-center">
-											<span class="text-success"> ${success}</span>
+											<span class="text"> ${success}</span>
 										</h3>
 
 
@@ -199,8 +199,8 @@ img {
 
 										<div class="control-group">
 											<div class="controls">
-												<button type="submit" id="submit" class="btn">Submit</button>
-												<a href="profile" class="btn">Cancel</a>
+												<button type="submit" id="submit" class="btn btn-warning">Submit</button>
+												<a href="profile" class="btn btn-dark">Cancel</a>
 
 											</div>
 

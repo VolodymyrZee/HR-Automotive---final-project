@@ -191,7 +191,7 @@ img {
 
 									<div class="control-group">
 										<div class="controls">
-											<button type="submit" id="submit" class="btn ">Submit</button>
+											<button type="submit" id="submit" class="btn btn-warning ">Submit</button>
 										</div>
 
 									</div>
@@ -254,8 +254,8 @@ img {
 
 									<div class="control-group">
 										<div class="controls">
-											<button type="submit" id="submit" class="btn ">Submit</button>
-											<a href="profile" class="btn ">Cancel</a>
+											<button type="submit" id="submit" class="btn btn-warning ">Submit</button>
+											<a href="profile" class="btn btn-dark ">Cancel</a>
 
 										</div>
 

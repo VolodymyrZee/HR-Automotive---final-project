@@ -25,6 +25,7 @@
         <link href="static1/css/flexslider.css" rel="stylesheet" /> 
         <link href="static1/css/bootstrap-responsive.css" rel="stylesheet" />
         <link href="static1/css/jcarousel.css" rel="stylesheet" />
+        
       
     
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

@@ -54,55 +54,54 @@
                         <a href="#page-top"></a>
                     </li>
                     
-                    
-                          
-              <c:choose>
-			  <c:when test="${empty loggedInUser}">			  
-              
-              
-              <!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
-               -->
-               <li><a href="login" class="page-scroll">Login</a></li>
-               <li><a href="register" class="page-scroll">Sign Up</a></li>
-              </c:when>
-			  <c:otherwise>
-			  <li><a href="logout" class="page-scroll">Logout</a></li>
-			  <li><a href="profile" class="page-scroll">My Profile</a></li>
-			  <li><a class="page-scroll" href="users">Users</a></li>
-			  </c:otherwise>
-			  </c:choose>
-              
-          
-                    
-                    <!-- <li>
-                        <a class="page-scroll" href="login">Login</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="register">Sign Up</a>
-                    </li> -->
-                    <li>
+                     <li>
                         <a class="page-scroll" href="services">Directions</a>
                     </li>
-                   <!--  <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li> -->
+                   
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
-                   <!--  <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li> -->
+                          
+              <c:choose>
+			  <c:when test="${empty loggedInUser}">			  
+              
+              
+             
+               <li><a href="login" class="page-scroll">Login</a></li>
+               <li><a href="register" class="page-scroll">Sign Up</a></li>
+              </c:when>
+			  <c:otherwise>
+			  <c:if test="${loggedInUser.role eq 'ADMIN'}"> 
+                              <li><a href="profile" class="page-scroll">My Profile</a></li>
+                              <li><a class="page-scroll" href="users">Costumers</a></li>
+                              <li><a href="logout" class="page-scroll">Logout</a></li>
+                              
+                              </c:if>
+                              <c:if test="${loggedInUser.role eq 'USER'}">
+								<li><a href="profile" class="page-scroll">My Profile</a></li>
+								<li><a href="mycars" class="page-scroll">My Cars</a></li>
+							
+								
+								<li><a href="logout" class="page-scroll">Logout</a></li>
+								</c:if>
+			  </c:otherwise>
+			  </c:choose>
+              
+          
+                
+                   
+                   
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+          
         </div>
-        <!-- /.container-fluid -->
+        
     </nav>
 
-    <!-- Header -->
+ 
     <header>
         <div class="container">
             <div class="intro-text">
@@ -111,7 +110,7 @@
                 
                 <div class="intro-heading">How can we help?</div>
                 </c:if>
-               <!--  <a href="login" class="page-scroll btn btn-xl">Schedule Service</a> -->
+               
                  
                 <c:choose>
 			  <c:when test="${empty loggedInUser}">			  
@@ -142,11 +141,10 @@
                    <span class="shop">
                         <img src="static1/img/HRpics/7.jpg" class="img-responsive " alt="">
                         <img src="static1/img/HRpics/2.jpg" class="img-responsive " alt="">
-                        <!-- <h4>Our Shop</h4> -->
-                        <!-- <p class="text-muted">State of art facility</p> -->
+                        
                         <img src="static1/img/HRpics/4.jpg" class="img-responsive " alt="">
                         
-                        <!-- <p class="text-muted">Professional tools</p> -->
+                       
                         <img src="static1/img/HRpics/8.jpg" class="img-responsive " alt="">
                         
                    
@@ -311,7 +309,7 @@
 												data-msg="Please write something for me"
 												placeholder="Message"></textarea>
 											<p class="text-left">
-												<button class="btn btn-large btn-theme margintop10"
+												<button class="btn btn-large btn-warning"
 													type="submit">Send message</button>
 											</p>
 										</div>

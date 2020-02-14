@@ -14,17 +14,17 @@ import com.myProject.HRproject.repository.CarRepository;
 
 @Service
 @Transactional
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarService {
 	@Autowired
 	private CarRepository carRepository;
-	
+
 	@Override
 	public Optional<Cars> findByMake(String make) {
 		return carRepository.findMake(make);
 	}
 
 	@Override
-	public List<Cars> findByModel(String model) {		
+	public List<Cars> findByModel(String model) {
 		return carRepository.findByModel(model);
 	}
 
@@ -45,8 +45,8 @@ public class CarServiceImpl implements CarService{
 
 	@Override
 	public void updatecars(Cars cars) {
-		Cars car=findByCarId(cars.getId()).get();
-		if(car !=null) {
+		Cars car = findByCarId(cars.getId()).get();
+		if (car != null) {
 			car.setColor(cars.getColor());
 			car.setMake(cars.getMake());
 			car.setModel(cars.getModel());
@@ -54,7 +54,6 @@ public class CarServiceImpl implements CarService{
 			car.setLicensePlate(cars.getLicensePlate());
 		}
 	}
-	
 
 	@Override
 	public List<Cars> findAll() {
@@ -63,13 +62,8 @@ public class CarServiceImpl implements CarService{
 
 	@Override
 	public List<Cars> findAllByCarUser(Users carUser) {
-		// TODO Auto-generated method stub
+
 		return carRepository.findAllByCarUser(carUser);
 	}
 
-	
-
 }
-
-
-

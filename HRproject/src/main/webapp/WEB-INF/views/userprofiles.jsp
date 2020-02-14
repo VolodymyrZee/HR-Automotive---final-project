@@ -123,7 +123,7 @@
 							<li class=""><a href="#three" data-toggle="tab">
 									Contact Info </a></li>
 							<li class=""><a href="#two" data-toggle="tab"> <i
-									class="font-icon-email"></i> Contact Me
+									class="font-icon-email"></i> Contact ${profiles.fname} ${profiles.lname}
 							</a></li>
 						</ul>
 						<div class="tab-content">

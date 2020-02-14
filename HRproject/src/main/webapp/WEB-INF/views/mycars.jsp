@@ -18,7 +18,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Profile</title>
+<title>My Cars</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="" />
@@ -47,6 +47,7 @@
 <link rel="apple-touch-icon-precomposed"
 	href="ico/apple-touch-icon-57-precomposed.png" />
 <link rel="shortcut icon" href="ico/favicon.png" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style type="text/css">
 img {
@@ -65,8 +66,8 @@ img {
 			<div class="container">
 				<div class="row">
 					<div class="span4">
-						<div class="inner-heading">
-							<h2>Profile</h2>
+						<div class="">
+							<h2>My Cars</h2>
 						</div>
 					</div>
 					<c:if test="${loggedInUser.role eq 'ADMIN'}">
@@ -109,7 +110,7 @@ img {
                   <th>Model</th>
                   <th>Color</th>
                    <th>License Plate</th>
-                   <th>click</th>
+                
                                  
                 </tr>
               </thead>
@@ -117,29 +118,32 @@ img {
                 <c:forEach var="item" items="${cars}" >
                 <tr>
                   <td>
-                    ${cars.indexOf(item)+1}.
+                   <strong> ${cars.indexOf(item)+1}.</strong>
                   </td>            
                   
                   <td>
-                  ${item.year}
+                <strong>  ${item.year}</strong>
                  
                   </td>
                   <td>
-                      ${item.make}
+                     <strong> ${item.make}</strong>
                   </td>
                   <td>
-                    ${item.model}
+                   <strong> ${item.model}</strong>
                   </td>
                   <td>
-                    ${item.color}
+                   <strong> ${item.color}</strong>
                   </td>
                   <td>
-                    ${item.licensePlate}
+                   <strong> ${item.licensePlate}</strong>
                   </td>
                  <td>
-                 <li class="">
-                 	<Strong><a href="mycarServices?carId=${item.id}" >Service Car</a></Strong>
-                  </li>
+                 
+                 	<%-- <Strong><a href="mycarServices?carId=${item.id}" >Service Car</a></Strong> --%>
+                 	<a href="mycarServices?carId=${item.id}" class="btn btn-warning "><i class="glyphicon glyphicon-wrench"></i>Service Car</a>
+                 	
+                 	
+                 
                  </td>
                 </tr>
                 </c:forEach>

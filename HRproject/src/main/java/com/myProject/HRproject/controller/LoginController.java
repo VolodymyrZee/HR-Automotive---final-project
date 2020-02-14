@@ -196,7 +196,7 @@ public class LoginController {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 		}
-		return "profile";		
+		return "redirect:/profile";		
 	}
 	
 	
@@ -273,7 +273,7 @@ public class LoginController {
 			//e.printStackTrace();
 		}
 		
-		return "redirect:/users";		
+		return "redirect:/index#team";		
 	}
 	
 	@ModelAttribute("profile")
