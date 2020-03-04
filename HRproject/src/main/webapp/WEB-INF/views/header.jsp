@@ -37,8 +37,7 @@
 								<li><a href="register"><i class="icon-user"></i>
 										<h4></h4></a></li>
 
-								<!-- <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i>Sign Up</a></li>
-               -->
+
 								<li><a href="#mySignin" data-toggle="modal"><h4></h4></a></li>
 							</c:when>
 							<c:otherwise>
@@ -151,7 +150,7 @@
 						Services</a>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
+
 				<div class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1">
 
@@ -167,8 +166,8 @@
 						<li><a class="page-scroll" href="services">Directions</a></li>
 
 						<li><a class="page-scroll" href="index#about">About</a></li>
-						
-						
+
+
 
 
 
@@ -176,23 +175,23 @@
 							<c:when test="${empty loggedInUser}">
 
 
-								
+
 								<li><a href="login" class="page-scroll">Login</a></li>
 								<li><a href="register" class="page-scroll">Sign Up</a></li>
 							</c:when>
 							<c:otherwise>
-                              <c:if test="${loggedInUser.role eq 'ADMIN'}"> 
-                              <li><a href="profile" class="page-scroll">My Profile</a></li>
-                              <li><a class="page-scroll" href="users">Costumers</a></li>
-                              <li><a href="logout" class="page-scroll">Logout</a></li>
-                              
-                              </c:if>
-                              <c:if test="${loggedInUser.role eq 'USER'}">
-								<li><a href="profile" class="page-scroll">My Profile</a></li>
-								<li><a href="mycars" class="page-scroll">My Cars</a></li>
-							
-								
-								<li><a href="logout" class="page-scroll">Logout</a></li>
+								<c:if test="${loggedInUser.role eq 'ADMIN'}">
+									<li><a href="profile" class="page-scroll">My Profile</a></li>
+									<li><a class="page-scroll" href="users">Costumers</a></li>
+									<li><a href="logout" class="page-scroll">Logout</a></li>
+
+								</c:if>
+								<c:if test="${loggedInUser.role eq 'USER'}">
+									<li><a href="profile" class="page-scroll">My Profile</a></li>
+									<li><a href="mycars" class="page-scroll">My Cars</a></li>
+
+
+									<li><a href="logout" class="page-scroll">Logout</a></li>
 								</c:if>
 							</c:otherwise>
 						</c:choose>
