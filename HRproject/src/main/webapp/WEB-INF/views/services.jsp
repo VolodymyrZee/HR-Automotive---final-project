@@ -47,14 +47,14 @@
 		<jsp:include page="header.jsp" />
 
 
-           
+
 
 		<section id="content">
 			<iframe
 				src="https://maps.google.com/maps?q=HR%20Automotive%20st%20louis&t=&z=13&ie=UTF8&iwloc=&output=embed"
 				width="100%" height="650" frameborder="0" style="border: 0"
 				allowfullscreen></iframe>
-			
+
 			<!-- div class="mapouter"><div class="gmap_canvas"><iframe width="1080" height="642" id="gmap_canvas" src="https://maps.google.com/maps?q=HR%20Automotive%20st%20louis&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:642px;width:1080px;}.gmap_canvas {overflow:hidden;background:none!important;height:642px;width:1080px;}</style></div> -->
 		</section>
 		<section id="content">
@@ -63,7 +63,8 @@
 				<div class="row">
 					<div class="span12">
 						<h4>
-							<span style="padding-left:315px; padding-bottom:85px">${msg}</span> <strong>contact form below</strong>
+							<span style="padding-left: 315px; padding-bottom: 85px">${msg}</span>
+							<strong>contact form below</strong>
 						</h4>
 
 						<form action="sendemail" method="post" role="form"
@@ -96,8 +97,7 @@
 										placeholder="Message"></textarea>
 									<div class="validation"></div>
 									<p class="text-center">
-										<button class="btn "
-											type="submit">Submit message</button>
+										<button class="btn " type="submit">Submit message</button>
 									</p>
 								</div>
 							</div>

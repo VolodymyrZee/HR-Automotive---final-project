@@ -17,36 +17,6 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 
-<!-- <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    Custom Fonts
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    Theme CSS
-    <link href="static/css/agency.min.css" rel="stylesheet">
-
-  css
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="static/css/bootstrap.css" rel="stylesheet" />
-  <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
-  <link href="static/css/jcarousel.css" rel="stylesheet" />
-  <link href="static/css/flexslider.css" rel="stylesheet" />
-  <link href="static/css/style.css" rel="stylesheet" />
-  Theme skin
-  <link href="static/skins/default.css" rel="stylesheet" />
-  boxed bg
-  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
-  Fav and touch icons
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-  <link rel="shortcut icon" href="ico/favicon.png" /> -->
 
 
 <!-- css -->
@@ -102,7 +72,7 @@
 									<button type="submit" class="btn ">Search</button>
 								</form>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div>
@@ -120,10 +90,11 @@
 
 							<li class="active"><a href="#one" data-toggle="tab"> Car
 									Services </a></li>
-							<li class=""><a href="#three" data-toggle="tab">
-									Contact Info </a></li>
+							<li class=""><a href="#three" data-toggle="tab"> Contact
+									Info </a></li>
 							<li class=""><a href="#two" data-toggle="tab"> <i
-									class="font-icon-email"></i> Contact ${profiles.fname} ${profiles.lname}
+									class="font-icon-email"></i> Contact ${profiles.fname}
+									${profiles.lname}
 							</a></li>
 						</ul>
 						<div class="tab-content">
@@ -191,9 +162,9 @@
 														<c:forEach var="item" items="${carServices}">
 															<tr>
 
-																<td>
-																	<strong>${item.serviceCar.make} <br/> ${item.serviceCar.model} ${item.serviceCar.year}</strong>
-																</td>
+																<td><strong>${item.serviceCar.make} <br />
+																		${item.serviceCar.model} ${item.serviceCar.year}
+																</strong></td>
 
 																<td><strong>${item.serviceDescription}</strong></td>
 																<td><strong>${item.serviceRequestDate}</strong></td>
