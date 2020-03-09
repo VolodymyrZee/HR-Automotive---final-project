@@ -17,8 +17,7 @@
   <meta name="author" content="" />
 
 
-<!--   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
- -->
+
     <!-- Custom Fonts -->
     <link href="static1/css/bootstrap.css" rel="stylesheet" />
       <link href="static1/css/style2.css" rel="stylesheet" />
