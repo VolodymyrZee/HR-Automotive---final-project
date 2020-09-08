@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.myProject.HRproject.model.Users;
 
-public interface UserRepository extends JpaRepository<Users, Long > {      // object Useers. id Long - key 
+public interface UserRepository extends JpaRepository<Users, Long > {    // object Useers. id Long - key 
 
 	Users findByEmail(String email);
 	@Query("FROM Users WHERE email=?1")

@@ -102,7 +102,7 @@ public class UploadController {
 			e.printStackTrace();
 		}
 	 
-	    return "redirect:/profile";		
+	    return "redirect:/profile";		//return back to profile page
 	}
 	
 	 
