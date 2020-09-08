@@ -16,6 +16,7 @@
 	<description>Final project for Spring Boot</description>
 
 	<properties>
+		
 		<java.version>1.8</java.version>
 		
 	</properties>
@@ -72,6 +73,7 @@
 		  <scope>test</scope>
 		</dependency>
 		<dependency>
+		<!-- Need this for testing -->
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <!-- <version>3.141.59</version> -->
@@ -82,6 +84,7 @@
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
+				<!-- Need this for testing -->
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
