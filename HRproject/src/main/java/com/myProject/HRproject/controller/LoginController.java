@@ -133,7 +133,7 @@ public class LoginController {
 	public String deleteuser(@RequestParam long id, RedirectAttributes redirect) {
 
 		userService.delete(id);
-		redirect.addFlashAttribute("success", "Delete Success");
+		redirect.addFlashAttribute("success", "Deletion Success");
 		return "redirect:/users";
 	}
 
