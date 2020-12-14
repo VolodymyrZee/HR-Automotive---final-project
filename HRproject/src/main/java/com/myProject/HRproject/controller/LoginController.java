@@ -240,7 +240,7 @@ public class LoginController {
 			webUtils.sendMail(to, msg, "Hi Message");
 			model.addFlashAttribute("msg", "Email sent");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			// e.printStackTrace();
 		}
 

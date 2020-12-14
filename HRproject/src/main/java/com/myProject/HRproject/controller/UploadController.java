@@ -77,7 +77,7 @@ public class UploadController {
   	   
 		try {
 			webUtils.multiplesave(files, id);
-			//log.info("Fules  {}", files.toString() );
+			//log.info("Files  {}", files.toString() );
 			model.addAttribute("success", files.length+ "Images added size");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
